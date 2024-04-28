@@ -118,6 +118,7 @@
 	--bs-primary : var(--primary);
 	--bs-secondary : var(--secondary);
 	--bs-primary-rgb : var(--primary-rgb);
+
 }
 
 /*================================ VARIABLES ================================*/
@@ -139,13 +140,7 @@ a:is(:hover, a:focus, a:active), .btn:is(:hover, :focus, :active){
 .mainheadwrapper{
 	padding-top: var(--navbarheader-height);
 	min-height: 120px;
-/*	background-color: var(--bs-light);*/
-	
-	
-	background: -moz-linear-gradient(90deg, rgba(31,185,229,1) 0%, rgba(40,59,106,1) 100%);
-	background: -webkit-linear-gradient(90deg, rgba(31,185,229,1) 0%, rgba(40,59,106,1) 100%);
-	background: linear-gradient(90deg, rgba(31,185,229,1) 0%, rgba(40,59,106,1) 100%);
-	
+	background-color: #a1f9fe;
 }
 .mainheadwrapper .section-heading{
 	padding: 3.5rem 0;
@@ -159,7 +154,7 @@ a:is(:hover, a:focus, a:active), .btn:is(:hover, :focus, :active){
     font-weight: 700;
     letter-spacing: var(--letterspacing-small);
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--primary);
     font-size: 2.5rem;
     line-height: normal;
     margin-bottom: 0;
@@ -745,7 +740,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	font-size: 0.8rem;
 	white-space: nowrap;
 	transition: all 0.1s linear;
-	font-weight: 600;
+	font-weight: 500;
 	letter-spacing: var(--letterspacing-small);
 	color: var(--text-color);
 }
@@ -864,7 +859,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	font-size: 2.25rem;
 	font-weight: bold;
 	color: #ffffff;
-	background-color: #13c5dd;
+	background-color: var(--primary);
 	letter-spacing: var(--letterspacing-small);
 	text-transform: uppercase;
 	display: inline-block;
@@ -914,7 +909,8 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 .herocard{
 	overflow: hidden;
 	--bs-card-border-width : 0;
-	--bs-card-border-radius : 0.5rem;
+	--bs-card-border-radius : 0;
+	border-top: 2px solid var(--primary);;
 }
 .herocard .herocardrow{
 }
@@ -928,16 +924,16 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
     gap: 0.5rem;
 }
 .herocardrow>.herocarditem:nth-child(1){
-	background-color: #b8e8c0;
+	background-color: #EAF8EB;
 }
 .herocardrow>.herocarditem:nth-child(2){
-	background-color: #97e7e1;
+	background-color: #CDF5FD;
 }
 .herocardrow>.herocarditem:nth-child(3){
-	background-color: #6ad4dd;
+	background-color: #A1E9FF;
 }
 .herocardrow>.herocarditem:nth-child(4){
-	background-color: #6ab2dd;
+	background-color: #84E2FE;
 }
 .herocardrow>.herocarditem .herocarditem_image{
 	width: 84px;
@@ -958,7 +954,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	font-size: 0.85rem;
 	font-weight: 400;
 	color: var(--text-color);
-	letter-spacing: var(--letterspacing-medium);
+	letter-spacing: var(--letterspacing-small);
 	margin: 0px;
 }
 .counterrow{
@@ -977,7 +973,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	height: 54px;
 	border: 1px solid var(--primary);
 	border-radius: 50%;
-	padding: 0.25rem;
+	padding: 0.7rem;
 	background-color: #fff;
 }
 .counteritem .counteritem_image img{
@@ -989,7 +985,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 .counteritem .counteritem_content .counteritem_title{
 	margin-bottom: 0.5rem;
 	text-transform: uppercase;
-	font-size: 2.75rem;
+	font-size: 2rem;
 	font-weight: bold;
 	letter-spacing: var(--letterspacing-small);
 	color: var(--primary);
@@ -1012,7 +1008,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	background-color: var(--product-bg);
 	overflow: hidden;
     --bs-card-border-width: 0;
-    --bs-card-border-radius: 0.5rem;
+    --bs-card-border-radius: 0;
     --bs-card-spacer-y: 1.5rem;
     --bs-card-spacer-x: 1.5rem;
     height: 100%;
@@ -1144,12 +1140,13 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 
 /*--------------------------- QUESTIONAIRE START ----------------------------*/
 .section-questionaire{
-	background-color: #f8f6e3;
+	background-color: #F0F5F4;
 	position: relative;
 }
 .section-questionaire:before{
 	content: '';
-	background: url(https://images.pexels.com/photos/5752281/pexels-photo-5752281.jpeg) no-repeat center center / cover;
+/*	background: url(https://images.pexels.com/photos/5752281/pexels-photo-5752281.jpeg) no-repeat center center / cover;*/
+background: url("../img/testingeye_bg.jpg") no-repeat center center / cover;
 }
 .questionaire-banner{
 	width: 100%;
@@ -1164,7 +1161,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 .questionaire-area{
 	height: 100%;
 	padding: 2rem 1rem 2rem 0 ;
-	background-color: #f8f6e3;
+/*	background-color: #f8f6e3;*/
 }
 .questionaire-content{}
 .questionaire-content .questionaire-heading{
@@ -1247,7 +1244,9 @@ margin-top: -0.1em;
 /*---------------------------- QUESTIONAIRE END -----------------------------*/
 
 /*----------------------------- EYE TEST START ------------------------------*/
-
+.section-video{
+	background-color: var(--primary);
+}
 .videocard{
 	overflow: hidden;
     --bs-card-border-width: 0;
@@ -1356,10 +1355,31 @@ margin-top: -0.1em;
 /*------------------------------- CONTACT END -------------------------------*/
 
 /*-------------------------------- FAQ START --------------------------------*/
+.faq-nav{
+	--bs-nav-link-color : var(--text-color);
+	--bs-nav-link-hover-color : var(--primary);
+	--bs-nav-pills-link-active-bg : var(--primary);
+	--bs-nav-pills-link-active-color : var(--onprimary);
+	--bs-nav-pills-border-radius : 0;
+	--bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: 1rem;
+    --bs-nav-link-font-weight : bold;
+}
+.faq-nav .nav-link.active{
+	border-color: var(--primary);
+
+}
+.faq-nav .nav-link{
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--border-color);
+	letter-spacing: var(--letterspacing-small);
+	text-transform: uppercase;
+}
 .faq-accordion{
 	--bs-accordion-color: var(--text-color);
     
-    
+    --bs-accordion-border-radius : 0;
     --bs-accordion-border-color: var(--border-color);
     --bs-accordion-btn-padding-x: 1rem;
     --bs-accordion-btn-padding-y: 1rem;
