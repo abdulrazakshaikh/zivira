@@ -301,7 +301,7 @@
                   <p class="section-subtitle">Are there any issues with your vision currently, please give answer to each the questions, even if you do not have any complaints at the moment.</p>
                 </div>
                 
-                <div class="questionaire-content">
+                <!-- <div class="questionaire-content">
                   <div class="questionaire-heading">
                     <span class="questionaire-num">Q1</span>
                     <span class="questionaire-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dignissimos sed itaque explicabo atque illum maiores?</span>
@@ -328,12 +328,12 @@
                     <button type="button" class="btn btn-primary" disabled>Previous</button>
                     <button type="button" class="btn btn-primary">Next</button>
                   </div>
-                </div>
+                </div> -->
 
                 <!-- FORM -->
-                <!-- <div class="questionaire-content">
+                <div class="questionaire-content">
                   <div class="questionaire-heading">
-                    <span class="questionaire-title">Fill the form to view your Score</span>
+                    <span class="questionaire-title text-muted fw-bold">Fill the form to view your Score</span>
                   </div>
                   <div class="questionaire-body">
                     <div class="row g-3">
@@ -359,9 +359,9 @@
                   </div>
                   <div class="questionaire-footer">
                     <button type="button" class="btn btn-primary">Previous</button>
-                    <button type="button" class="btn btn-primary">Get Score</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scoreModal">Get Score</button>
                   </div>
-                </div> -->
+                </div>
                   
               </div>
             </div>
@@ -556,6 +556,38 @@
 </footer>
 
 </main>
+
+
+<!-- Modal -->
+<div class="modal fade score-modal" id="scoreModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <span class="material-icons-outlined">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="result-icon">
+              <img src="img/result-icon.svg" alt="">
+            </div>
+          </div>
+          <div class="col-12">
+            <h3 class="result-text">You Eye Test is Normal eye pressure</h3>
+          </div>
+          <div class="col-12 text-center">
+            <button class="btn btn-primary btn-icon m-auto py-2 px-3">
+              <span class="material-icons-outlined icon">file_download</span>
+              <span class="btn-text">Download the Result</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Jquery -->
 <script src="js/jquery-3.7.1.min.js"></script>
