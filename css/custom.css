@@ -501,6 +501,7 @@ body::-webkit-scrollbar, .scroll-list::-webkit-scrollbar{width: 5px; height: 5px
 }
 
 
+
 @media (min-width: 991px){
 	.navbar-header{
 		height: var(--navbarheader-height); 
@@ -910,7 +911,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	overflow: hidden;
 	--bs-card-border-width : 0;
 	--bs-card-border-radius : 0;
-	border-top: 2px solid var(--primary);;
+/*	border-top: 2px solid var(--primary);*/
 }
 .herocard .herocardrow{
 }
@@ -922,18 +923,22 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
     justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
+    border: 2px solid var(--primary);
+    /*border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    border-left: 2px solid var(--primary);*/
 }
 .herocardrow>.herocarditem:nth-child(1){
-	background-color: #EAF8EB;
+	background-color: #eaf8eb;
 }
 .herocardrow>.herocarditem:nth-child(2){
-	background-color: #CDF5FD;
+	background-color: #cdf5fd;
 }
 .herocardrow>.herocarditem:nth-child(3){
-	background-color: #A1E9FF;
+	background-color: #a1e9ff;
 }
 .herocardrow>.herocarditem:nth-child(4){
-	background-color: #84E2FE;
+	background-color: #84e2fe;
 }
 .herocardrow>.herocarditem .herocarditem_image{
 	width: 84px;
@@ -1000,6 +1005,20 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
     letter-spacing: var(--letterspacing-medium);
     line-height: 1;
 }
+
+@media (min-width: 991px){
+/*	.herocardrow>.herocarditem:not(:last-child){border-right: 0px;}*/
+}
+@media (max-width: 990.98px){
+	.herocardrow>.herocarditem:nth-child(1){border-right: 0px}
+	.herocardrow>.herocarditem:nth-child(3){border-top: 0px; border-right: 0px}
+	.herocardrow>.herocarditem:nth-child(4){border-top: 0px}
+	
+}
+@media (max-width: 767.98px){}
+	.herocardrow>.herocarditem:nth-child(1){border-bottom: 0px; border-right: 2px solid var(--primary);}
+	.herocardrow>.herocarditem:nth-child(3){border-right: 2px solid var(--primary);}
+@media (max-width: 576.98px){}
 
 /*------------------------------- INFO END --------------------------------*/
 
