@@ -40,9 +40,9 @@
 	--secondaryfont : 'Segoe UI', sans-serif;
 
 	/*	COMPONENT SIZE*/
-	--navbarheader-height : 105px;
+	--navbarheader-height : 80px;
 	--topbar-height : 26px;
-	--navbarheader-shrink : 36px;
+	--navbarheader-shrink : 10px;
 	--navbaroffcanvas-width : 240px;
 	--letterspacing-small : 0.05rem;
 	--letterspacing-medium : 0.10rem;
@@ -409,6 +409,7 @@ body::-webkit-scrollbar, .scroll-list::-webkit-scrollbar{width: 5px; height: 5px
 
 
 .navbar-header .topbar{
+	display: none;
 	height: var(--topbar-height);
     background: #000000;
     width: 100%;
@@ -522,7 +523,7 @@ body::-webkit-scrollbar, .scroll-list::-webkit-scrollbar{width: 5px; height: 5px
 		--bs-navbar-nav-link-padding-x: 0rem;
 		--nav-spacing : 1.5rem; display: flex; 
 		gap: var(--nav-spacing); 
-		height: calc(var(--navbarheader-height) - var(--topbar-height));
+		height: var(--navbarheader-height);
 		-webkit-transition: all 0.2s;
 	    -moz-transition: all 0.2s;
 	    transition: all 0.2s;
@@ -892,13 +893,14 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	.hero-title{font-size: 2.25rem}
 	.hero-subtitle{font-size: 1.1rem}
 	.hero-highlighttitle{font-size: 1.1rem}
+	.carousel-control-next, .carousel-control-prev{width: 36px; height: 36px; font-size: 1rem;}
 
 }
 @media (max-width: 576.98px){
 	.carousel-image{width: 250px; height: 250px;}
-	.hero-title{font-size: 1.2rem}
-	.hero-subtitle{font-size: 0.85rem}
-	.hero-highlighttitle{font-size: 0.85rem}
+	.hero-title{font-size: 2rem}
+	.hero-subtitle{font-size: 1rem}
+	.hero-highlighttitle{font-size: 1rem}
 
 }
 /*------------------------------- HERO END --------------------------------*/
@@ -914,6 +916,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 /*	border-top: 2px solid var(--primary);*/
 }
 .herocard .herocardrow{
+	border: 2px solid var(--primary);
 }
 .herocardrow>.herocarditem{
 	padding: 1rem;
@@ -923,11 +926,12 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
     justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
-    border: 2px solid var(--primary);
+/*    border: 2px solid var(--primary);*/
     /*border-top: 2px solid var(--primary);
     border-bottom: 2px solid var(--primary);
     border-left: 2px solid var(--primary);*/
 }
+
 .herocardrow>.herocarditem:nth-child(1){
 	background-color: #eaf8eb;
 }
@@ -1007,18 +1011,29 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 }
 
 @media (min-width: 991px){
+	.herocardrow>.herocarditem:not(:last-child){
+		border-right: 2px solid var(--primary);
+	}
+
 /*	.herocardrow>.herocarditem:not(:last-child){border-right: 0px;}*/
 }
-@media (max-width: 990.98px){
-	.herocardrow>.herocarditem:nth-child(1){border-right: 0px}
-	.herocardrow>.herocarditem:nth-child(3){border-top: 0px; border-right: 0px}
-	.herocardrow>.herocarditem:nth-child(4){border-top: 0px}
-	
+@media (min-width: 768px) and (max-width: 990.98px){
+	.herocardrow>.herocarditem:nth-child(1),
+	.herocardrow>.herocarditem:nth-child(3){
+		border-right: 2px solid var(--primary);
+	}
+	.herocardrow>.herocarditem:nth-child(1),
+	.herocardrow>.herocarditem:nth-child(2){
+		border-bottom: 2px solid var(--primary);
+	}	
 }
+/*@media (max-width: 767.98px){}*/
 @media (max-width: 767.98px){}
-	.herocardrow>.herocarditem:nth-child(1){border-bottom: 0px; border-right: 2px solid var(--primary);}
-	.herocardrow>.herocarditem:nth-child(3){border-right: 2px solid var(--primary);}
-@media (max-width: 576.98px){}
+	.herocardrow>.herocarditem:not(:last-child){
+		border-bottom: 2px solid var(--primary);
+	}
+@media (max-width: 576.98px){
+}
 
 /*------------------------------- INFO END --------------------------------*/
 
