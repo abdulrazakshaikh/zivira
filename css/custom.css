@@ -1028,10 +1028,11 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	}	
 }
 /*@media (max-width: 767.98px){}*/
-@media (max-width: 767.98px){}
+@media (max-width: 767.98px){
 	.herocardrow>.herocarditem:not(:last-child){
 		border-bottom: 2px solid var(--primary);
 	}
+}
 @media (max-width: 576.98px){
 }
 
@@ -1163,6 +1164,26 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	color: #62605c;
 	letter-spacing: var(--letterspacing-small);
 }
+.infotabcard{
+    --bs-card-cap-padding-y: 0rem;
+    --bs-card-cap-padding-x: 0rem;
+    --bs-card-cap-bg : transparent;
+   	margin-bottom: 1rem;
+}
+.infotabcard .nav{
+	--bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: 1rem;
+    --bs-nav-underline-gap : 0rem;
+    --bs-nav-link-font-size : 0.95rem;
+    --bs-nav-link-color : var(--text-color);
+    --bs-nav-link-hover-color :  var(--primary);
+    --bs-nav-underline-link-active-color : var(--primary);
+}
+.infotabcard .nav .nav-link{
+	font-weight: 500;
+    letter-spacing: var(--letterspacing-medium);
+}
+
 @media (min-width: 991px){
 	.product-details-image{
 		position: sticky;

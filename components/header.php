@@ -42,7 +42,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="diseases.html" class="nav-link">Diseases</a>
+                        <a href="about_dry_eyes.html" class="nav-link">Diseases</a>
                     </li>
                     <li class="nav-item">
                         <a href="products.html" class="nav-link">Products</a>

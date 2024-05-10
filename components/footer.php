@@ -19,7 +19,7 @@
                     <h3 class="widget-title">Links</h3>
                     <ul class="widget-nav_menu-links">
                       <li class="menu-item">
-                        <a href="diseases.html" class="menu-link">Diseases</a>
+                        <a href="about_dry_eyes.html" class="menu-link">Diseases</a>
                       </li>
                       <li class="menu-item">
                         <a href="products.html" class="menu-link">Products</a>
