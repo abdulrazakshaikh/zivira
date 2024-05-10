@@ -810,14 +810,13 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 /*------------------------------- HERO START --------------------------------*/
 .section.section-hero{
 	padding-top: var(--navbarheader-height);
-	padding-bottom: 100px	;
+	padding-bottom: 100px;
 }
 .section-hero{
 	background-color: #a1f9fe;
 }
 .section-hero .carousel .carousel-inner{
-	
-	height: 70vh;
+	height: 100vh;
 }
 .section-hero .carousel .carousel-inner .carousel-item{
 	height: 100%;
@@ -849,23 +848,23 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 }
 .hero-subtitle{
 	margin-bottom: 1rem;
-	font-size: 2rem;
-	font-weight: 900;
-	line-height: 1.2;
-	color: var(--text-color);
-	letter-spacing: var(--letterspacing-small);
-	text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--text-color);
+    letter-spacing: var(--letterspacing-small);
+    text-transform: uppercase;
 }
 .hero-highlighttitle{
 	margin: 0;
-	font-size: 2.25rem;
-	font-weight: bold;
-	color: #ffffff;
-	background-color: var(--primary);
-	letter-spacing: var(--letterspacing-small);
-	text-transform: uppercase;
-	display: inline-block;
-	padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: var(--primary);
+    letter-spacing: var(--letterspacing-small);
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0.5rem;
 }
 .hero-action{
 	margin-top: 1.5rem;
@@ -883,7 +882,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 
 
 @media (max-width: 990.98px){
-	.carousel-image{width: 400px; height: 400px;}
+	.carousel-image{width: 250px;}
 	.hero-title{font-size: 2.5rem}
 	.hero-subtitle{font-size: 1.2rem}
 	.hero-highlighttitle{font-size: 1.2rem}
@@ -893,14 +892,12 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	.hero-title{font-size: 2.25rem}
 	.hero-subtitle{font-size: 1.1rem}
 	.hero-highlighttitle{font-size: 1.1rem}
-	.carousel-control-next, .carousel-control-prev{width: 36px; height: 36px; font-size: 1rem;}
-
 }
 @media (max-width: 576.98px){
 	.carousel-image{width: 250px; height: 250px;}
-	.hero-title{font-size: 2rem}
-	.hero-subtitle{font-size: 1rem}
-	.hero-highlighttitle{font-size: 1rem}
+	.hero-title{font-size: 1.2rem}
+	.hero-subtitle{font-size: 0.85rem}
+	.hero-highlighttitle{font-size: 0.85rem}
 
 }
 /*------------------------------- HERO END --------------------------------*/
