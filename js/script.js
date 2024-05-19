@@ -25,23 +25,23 @@ winDow.addEventListener("scroll", function () {
 
 
 // --------------------------SMOOTH SCROLL TO SECTION--------------------------
-document.addEventListener("DOMContentLoaded", function () {
-    const exerciseBtn = document.getElementById("exercise-btn");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const exerciseBtn = document.getElementById("exercise-btn");
 
-    exerciseBtn.addEventListener("click", function () {
-        const exerciseSection = document.getElementById("exercise-section");
-        exerciseSection.scrollIntoView({ behavior: "smooth" });
-    });
+//     exerciseBtn.addEventListener("click", function () {
+//         const exerciseSection = document.getElementById("exercise-section");
+//         exerciseSection.scrollIntoView({ behavior: "smooth" });
+//     });
 
-    const testEyeBtn = document.getElementById("testeye-btn");
+//     const testEyeBtn = document.getElementById("testeye-btn");
 
-    testEyeBtn.addEventListener("click", function () {
-        const testEyeSection = document.getElementById("testeye-section");
-        testEyeSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+//     testEyeBtn.addEventListener("click", function () {
+//         const testEyeSection = document.getElementById("testeye-section");
+//         testEyeSection.scrollIntoView({ behavior: "smooth", block: "start" });
+//     });
 
 
-});
+// });
 
 
 

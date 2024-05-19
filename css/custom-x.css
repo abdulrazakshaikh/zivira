@@ -641,17 +641,6 @@ input[type=file]::file-selector-button{
 input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::file-selector-button{
 	background-color: rgba(var(--secondaryhover-rgb), 0.2);
 }
-.form-check-wrap{
-	display: flex;
-}
-.form-check-wrap .form-check{
-	flex: 0 !important;
-}
-.form-check-wrap .form-check .form-check-label{
-	font-weight: 500 !important;
-    
-    font-size: 0.85rem !important;
-}
 
 /*::-webkit-input-placeholder {
   font-size: 0.85rem; letter-spacing: var(--letterspacing-medium); color: var(--placeholder) !important; font-weight: 400;
@@ -833,8 +822,8 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 .carousel-image{
 	padding: 1rem;
 	max-width: 100%;
-	width: 500px;
-	height: 500px;
+	width: 450px;
+	height: 450px;
 	margin: auto;
 }
 .carousel-image img{
@@ -898,23 +887,22 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	background: -moz-radial-gradient(circle, rgba(55,159,209,1) 0%, rgba(41,126,167,1) 100%);
 	background: -webkit-radial-gradient(circle, rgba(55,159,209,1) 0%, rgba(41,126,167,1) 100%);
 	background: radial-gradient(circle, rgba(55,159,209,1) 0%, rgba(41,126,167,1) 100%);
-}
-.bg-image-2{
-	background: rgb(0,192,251);
-	background: -moz-radial-gradient(circle, rgba(0, 192, 251,1) 0%, rgba(1, 113, 238,1) 100%);
-	background: -webkit-radial-gradient(circle, rgba(0, 192, 251,1) 0%, rgba(1, 113, 238,1) 100%);
-	background: radial-gradient(circle, rgba(0, 192, 251,1) 0%, rgba(1, 113, 238,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#379fd1",endColorstr="#297ea7",GradientType=1);
 }
 @media (min-width: 991px){
 	.section-hero .carousel .carousel-inner .carousel-item.bg-image-1{
 		height: 100%;
 		background-image: url(../img/banner2.jpg);
-		background-repeat: no-repeat;background-position: center;background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 	}
 	.section-hero .carousel .carousel-inner .carousel-item.bg-image-2{
 		height: 100%;
 		background-image: url(../img/banner3.jpg);
-		background-repeat: no-repeat;background-position: center;background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 	}
 }
 @media (max-width: 990.98px){
@@ -925,10 +913,11 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 	.hero-highlighttitle{font-size: 1.2rem; text-align: center; display: table; margin: auto}
 	.section-hero .carousel .carousel-inner .carousel-item.bg-image .carousel-caption{
 		height: calc(100vh - var(--navbarheader-height));
-		top: 0;bottom: 0;left: 0;right: 0;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
 	}
-	.section-hero .carousel .carousel-inner{height:70vh}
-	.carousel-image{display: none;}
 }
 @media (max-width: 767.98px){
 	.carousel-image{width: 350px; height: 350px;}
@@ -1096,7 +1085,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 .productcard .card-image{
 	position: relative;
 	padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-	width: 100%;
+	width: 70%;
 	height: 350px;
 	margin: auto;
 	z-index: 1;
@@ -1157,7 +1146,7 @@ input[type=file]:is(:hover, :focus, :active):not(:disabled):not([readonly])::fil
 
 /*-------------------------- PRODUCT DETAILS START --------------------------*/
 .product-details-image{
-	width: 400px;
+	width: 300px;
 	max-width: 100%;
 	margin: auto;
 }
