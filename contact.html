@@ -9,10 +9,6 @@
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="process.php">
-
-    <!-- Slider CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
 
     <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
@@ -58,9 +54,6 @@
     </div>
 </nav>
 
-
-
-
 <main class="mainwrapper">
   <div class="mainheadwrapper">
     <div class="container">
@@ -69,235 +62,224 @@
     </div>
     </div>
   </div>
-    <div class="mainbodywrapper">
-      <section class="section">
-          <div class="container">
-            <div class="row g-4">
-              <div class="col-12 col-lg-4">
-                <div class="contact_feature">
-                  <div class="contact_icon">
-                    <i class="bi bi-house"></i>
-                  </div>
-                  <div class="contact_content">
-                    <h6 class="contact-heading">Find Us At</h6>
-                    <p class="contact-value">vigo city new york WT78,<br> Quence NY 123456, USA</p>
-                  </div>
+  <div class="mainbodywrapper">
+    <section class="section">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-12 col-lg-4">
+              <div class="contact_feature">
+                <div class="contact_icon">
+                  <i class="bi bi-house"></i>
                 </div>
-              </div>
-              <div class="col-12 col-lg-4">
-                <div class="contact_feature">
-                  <div class="contact_icon">
-                    <i class="bi bi-telephone"></i>
-                  </div>
-                  <div class="contact_content">
-                    <h6 class="contact-heading">Get In Touch</h6>
-                    <p class="contact-value">+91 9876543210</p>
-                    <p class="contact-value">+91 753421890</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-lg-4">
-                <div class="contact_feature">
-                  <div class="contact_icon">
-                    <i class="bi bi-envelope"></i>
-                  </div>
-                  <div class="contact_content">
-                    <h6 class="contact-heading">Mail Me At</h6>
-                    <p class="contact-value">info@domain.in</p>
-                    <p class="contact-value">sales@domain.in</p>
-                  </div>
+                <div class="contact_content">
+                  <h6 class="contact-heading">Find Us At</h6>
+                  <p class="contact-value">Zivira Private Limited </br> 906, 9th floor, Eco star, </br>Off Vishweshwar Road, Goregaon east,  Mumbai - 400063.</p>
                 </div>
               </div>
             </div>
-
-            <div class="contact-form">
-            <p class="text-muted fw-bold">Please complete the form below if you want to connect with us or send us a question or comment.</p>
-            <form action="">
-              <div class="row g-3">
-                <div class="col-12 col-lg-4">
-                  <div class="form-floating form-group mb-0">
-                    <input type="text" class="form-control" id="floatingfname" placeholder="placeholder" 
-                    oninput="preventNonCharacter(this)" required>
-                    <label for="floatingfname" class="form-label">First Name</label>
-                  </div>
+            <div class="col-12 col-lg-4">
+              <div class="contact_feature">
+                <div class="contact_icon">
+                  <i class="bi bi-telephone"></i>
                 </div>
-                <div class="col-12 col-lg-4">
-                  <div class="form-floating form-group mb-0">
-                    <input type="text" class="form-control" id="floatinglname" placeholder="placeholder" 
-                    oninput="preventNonCharacter(this)" required>
-                    <label for="floatinglname" class="form-label">Last Name</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="form-floating form-group mb-0">
-                    <input type="number" class="form-control" id="floatingPhone" placeholder="placeholder" 
-                    oninput="preventNonNumeric(this)" required>
-                    <label for="floatingPhone" class="form-label">Phone Number</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="form-floating form-group mb-0">
-                    <input type="email" class="form-control" id="floatingEmail" placeholder="placeholder" 
-                    onchange="validateEmail()" required>
-                    <label for="floatingEmail" class="form-label">Email</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="form-floating form-group mb-0">
-                    <input type="email" class="form-control" id="floatingVerifyEmail" placeholder="placeholder" 
-                    onchange="validateEmail()" required>
-                    <label for="floatingVerifyEmail" class="form-label">Verify Email</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="form-floating form-group mb-0">
-                    <input type="text" class="form-control" id="floatingAddress" placeholder="placeholder">
-                    <label for="floatingAddress" class="form-label">Address</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3">
-                  <div class="form-floating form-group mb-0">
-                    <input type="text" class="form-control" id="floatingCity" placeholder="placeholder">
-                    <label for="floatingCity" class="form-label">City</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3">
-                  <div class="form-floating form-group mb-0">
-                    <input type="text" class="form-control" id="floatingState" placeholder="placeholder">
-                    <label for="floatingState" class="form-label">State/Province</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3">
-                  <div class="form-floating form-group mb-0">
-                    <input type="text" class="form-control" id="floatingZip" placeholder="placeholder">
-                    <label for="floatingZip" class="form-label">Zipcode/Postalcode</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-3">
-                  <div class="form-floating form-group mb-0">
-                    <input type="text" class="form-control" id="floatingCountry" placeholder="placeholder">
-                    <label for="floatingCountry" class="form-label">Country</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-12">
-                  <div class="form-floating form-group">
-                    <textarea name="" id="" style="height: 150px" class="form-control" id="floatingMessage" placeholder="placeholder" required></textarea>
-                    <label for="floatingMessage" class="form-label">Message</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-12 text-end">
-                  <button type="submit" class="shadow btn btn-primary px-4 py-2 fs-6">Submit</button>
+                <div class="contact_content">
+                  <h6 class="contact-heading">Get In Touch</h6>
+                  <p class="contact-value">7777087112</p>
                 </div>
               </div>
-            </form>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="contact_feature">
+                <div class="contact_icon">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="contact_content">
+                  <h6 class="contact-heading">Mail Me At</h6>
+                  <p class="contact-value">blinkyoureyes@zivira.co.in</p>
+                </div>
+              </div>
             </div>
           </div>
-      </section>
-    </div>
+
+          <div class="contact-form">
+          <p class="text-muted fw-bold">Please complete the form below if you want to connect with us or send us a question or comment.</p>
+          <form action="https://formsubmit.co/66f742df21e1add90d13d784a2befeef" method="POST">
+            <input type="hidden" name="_next" value="https://blinkyoureyes.com/beta/dev/thanks.html">
+            <div class="row g-3">
+              <div class="col-12 col-lg-4">
+                <div class="form-floating form-group mb-0">
+                  <input type="text" name="fname" class="form-control" id="floatingfname" placeholder="placeholder" required>
+                  <label for="floatingfname" class="form-label">First Name</label>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="form-floating form-group mb-0">
+                  <input type="text" name="lname" class="form-control" id="floatinglname" placeholder="placeholder" required>
+                  <label for="floatinglname" class="form-label">Last Name</label>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="form-floating form-group mb-0">
+                  <input type="number" name="phone" class="form-control" id="floatingPhone" placeholder="placeholder" required>
+                  <label for="floatingPhone" class="form-label">Phone Number</label>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="form-floating form-group mb-0">
+                  <input type="email" name="email"  class="form-control" id="floatingEmail" placeholder="placeholder" required>
+                  <label for="floatingEmail" class="form-label">Email</label>
+                </div>
+              </div>
+              <div class="col-12 col-lg-8">
+                <div class="form-floating form-group mb-0">
+                  <input type="text" name="address" class="form-control" id="floatingAddress" placeholder="placeholder">
+                  <label for="floatingAddress" class="form-label">Address</label>
+                </div>
+              </div>
+              <div class="col-12 col-lg-3">
+                <div class="form-floating form-group mb-0">
+                  <input type="text" name="city" class="form-control" id="floatingCity" placeholder="placeholder">
+                  <label for="floatingCity" class="form-label">City</label>
+                </div>
+              </div>
+              <div class="col-12 col-lg-3">
+                <div class="form-floating form-group mb-0">
+                  <input type="text" name="state" class="form-control" id="floatingState" placeholder="placeholder">
+                  <label for="floatingState" class="form-label">State/Province</label>
+                </div>
+              </div>
+              <div class="col-12 col-lg-3">
+                <div class="form-floating form-group mb-0">
+                  <input type="text" name="zip" class="form-control" id="floatingZip" placeholder="placeholder">
+                  <label for="floatingZip" class="form-label">Zipcode/Postalcode</label>
+                </div>
+              </div>
+              <div class="col-12 col-lg-3">
+                <div class="form-floating form-group mb-0">
+                  <input type="text" name="country" class="form-control" id="floatingCountry" placeholder="placeholder">
+                  <label for="floatingCountry" class="form-label">Country</label>
+                </div>
+              </div>
+              <div class="col-12 col-lg-12">
+                <div class="form-floating form-group">
+                  <textarea name="message" style="height: 150px" class="form-control" id="floatingMessage" placeholder="placeholder" required></textarea>
+                  <label for="floatingMessage" class="form-label">Message</label>
+                </div>
+              </div>
+              <div class="col-12 col-lg-12 text-end">
+                <button type="submit" class="shadow btn btn-primary px-4 py-2 fs-6">Submit</button>
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
+    </section>
+  </div>
 
 <footer class="footer">
-  <div class="container">
-    <div class="row g-3">
-      <div class="col-12">
-        <div class="footer-top-inner">
-          <div class="row">
-            <div class="col-lg-3 col-12">
-              <div class="footer-about-widget">
-                <div class="footer-logo">
-                  <a class="logo" href="index.html"><img src="img/logo.png" class="img-fluid"></a>
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="footer-top-inner">
+                            <div class="row">
+                                <div class="col-lg-3 col-12">
+                                    <div class="footer-about-widget">
+                                        <div class="footer-logo">
+                                            <a class="logo" href="index.html"><img src="img/logo.png" class="img-fluid"></a>
+                                        </div>
+                                        <hr style="width: 210px;" />
+                                        <h6 class="footer-about-widget_title">Lighting Up Lives</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-6">
+                                            <div class="widget-nav_menu">
+                                                <h3 class="widget-title">Links</h3>
+                                                <ul class="widget-nav_menu-links">
+                                                    <li class="menu-item">
+                                                        <a href="about_dry_eyes.html" class="menu-link">About Dry Eyes</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="products.html" class="menu-link">Products</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="contact.html" class="menu-link">Contact Us</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="faq.html" class="menu-link">FAQs</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="other_resources.html" class="menu-link">Other Resources</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-6">
+                                            <div class="widget-nav_menu">
+                                                <h3 class="widget-title">Gel</h3>
+                                                <ul class="widget-nav_menu-links">
+                                                    <li class="menu-item">
+                                                        <a href="product2.html" class="menu-link">Zivifresh Gel</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="product6.html" class="menu-link">Ducira Gel</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="product7.html" class="menu-link">Tizta Liquigel</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="product5.html" class="menu-link">Fomira</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-6">
+                                            <div class="widget-nav_menu">
+                                                <h3 class="widget-title">Drops</h3>
+                                                <ul class="widget-nav_menu-links">
+                                                    <li class="menu-item">
+                                                        <a href="product1.html" class="menu-link">Zivifresh</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="product4.html" class="menu-link">Tizta 5ml</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="product3.html" class="menu-link">Tizta 10ml</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <hr style="width: 210px;" />
-                <h6 class="footer-about-widget_title">Lighting Up Lives</h6>
-              </div>
             </div>
-            <div class="col-lg-7 col-12">
-              <div class="row">
-                <div class="col-lg-3 col-6">
-                  <div class="widget-nav_menu">
-                    <h3 class="widget-title">Links</h3>
-                    <ul class="widget-nav_menu-links">
-                      <li class="menu-item">
-                        <a href="about_dry_eyes.html" class="menu-link">About Dry Eyes</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="products.html" class="menu-link">Products</a>
-                      </li>
-                      
-                      <li class="menu-item">
-                        <a href="contact.html" class="menu-link">Contact Us</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="faq.html" class="menu-link">FAQs</a>
-                      </li>
-                    </ul>
-                  </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright__inner">
+                                <p class="footer-bottom-text">Copyright &copy;2024 All rights reserved</p>
+                                <p class="footer-bottom-text">
+                                    <a href="privacy_statement.html">Privacy Statement</a>
+                                    <span>|</span>
+                                    <a href="terms_of_use.html">Terms of use</a>
+                                    <span>|</span>
+                                    <a href="report_an_adverse_event.html">Report an Adverse Event</a>
+                                    <span>|</span>
+                                    <a href="cookie_policy.html">Cookie Policy</a>
+                                    <span>|</span>
+                                    <a href="safety_information.html">Safety Information</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-6">
-                  <div class="widget-nav_menu">
-                    <h3 class="widget-title">Gel</h3>
-                    <ul class="widget-nav_menu-links">
-                      <li class="menu-item">
-                        <a href="product2.html" class="menu-link">Zivifresh Gel</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="product6.html" class="menu-link">Ducira Gel</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="product7.html" class="menu-link">Tizta Liquigel</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="product5.html" class="menu-link">Fomira</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-6">
-                  <div class="widget-nav_menu">
-                    <h3 class="widget-title">Drops</h3>
-                    <ul class="widget-nav_menu-links">
-                      <li class="menu-item">
-                        <a href="product1.html" class="menu-link">Zivifresh</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="product4.html" class="menu-link">Tizta 5ml</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="product3.html" class="menu-link">Tizta 10ml</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
-            
-          </div>  
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="copyright__inner">
-              <p class="footer-bottom-text">Copyright &copy;2024 All rights reserved</p>
-              <p class="footer-bottom-text">
-                <a href="privacy_statement.html">Privacy Statement</a>
-                <span>|</span>
-                <a href="terms_of_use.html">Terms of use</a>
-                <span>|</span>
-                <a href="report_an_adverse_event.html">Report an Adverse Event</a>
-                <span>|</span>
-                <a href="cookie_policy.html">Cookie Policy</a>
-                <span>|</span>
-                <a href="safety_information.html">Safety Information</a>
-              </p>
-            </div>
-          </div>
-      </div>
-    </div>  
-  </div>
-</footer>
+        </footer>
 
 </main>
 
@@ -307,174 +289,10 @@
 <!-- Bootstrap JS -->
 <script src="js/bootstrap.bundle.min.js"></script>
 
-<!-- Slider JS -->
-<script src="js/owl.carousel.min.js"></script>
 
 <!-- Custom JS -->
 <script src="js/script.js"></script>
 
-
-
-<script>
-    $(document).ready(function() {
-    $("#ScoreForm").hide();
-    $("#QuestionSet").show();
-      // Initialize FancyBox
-      $('[data-fancybox]').fancybox({
-        animationEffect: "fade",
-        transitionEffect: "slide",
-        buttons: [
-          "zoom",
-          "slideShow",
-          "fullScreen",
-          "download",
-          "thumbs",
-          "close"
-        ]
-      });
-    });
-
-    function preventNonCharacter(input) {
-            const value = input.value;
-            input.value = value.replace(/[^a-zA-Z\s'-]/g, '');
-        }
-
-    function preventNonNumeric(input) {
-            const value = input.value;
-            input.value = value.replace(/[^0-9]/g, '');
-        }
-
-    function refreshPage() {
-            location.reload();
-        }
-
-    function validateEmail() {
-            const email = document.getElementById('floatingEmail').value;
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-            if (emailPattern.test(email)) {
-                $("#EmailError").html("");
-            } else {
-                $("#EmailError").html("Please enter a valid email address.");
-                document.getElementById('floatingEmail').value = "";
-                $("#floatingemail").focus();
-            }
-        }
-
-    var pdfDoc=""
-    function SendMail(){
-
-    var Name = document.getElementById("floatingname").value;
-    var Phone = document.getElementById("floatingPhone").value;
-    var Email = document.getElementById("floatingEmail").value;
-    var Age = document.getElementById("floatingAge").value;
-    var GenderRadios = document.getElementsByName("inlineRadioOptions");
-    var Profession = document.getElementById("floatingProfession").value;
-    //var divResult = $("#pdfresult").html();
-
-    let selectedValue;
-    for (const radio of GenderRadios) {
-        if (radio.checked) {
-            selectedValue = radio.value;
-            break;
-        }
-    }
-
-      $("#NameError").html("");
-      $("#EmailError").html("");
-      $("#PhoneError").html("");
-      $("#AgeError").html("");
-      $("#GenderError").html("");
-      $("#ProfessionError").html("");
-
-      if(Name == ""){
-         $("#NameError").html("Please enter full name");
-         $("#floatingname").focus();
-          return false;
-      }
-
-      if(Phone == "")
-      {
-         $("#PhoneError").html("Please enter phone");
-         $("#floatingphone").focus();
-         return false;
-      }
-
-      if(Email == "")
-      {
-         $("#EmailError").html("Please enter email");
-         $("#floatingemail").focus();
-         return false;
-      }
-
-      if(Age == "")
-      {
-         $("#AgeError").html("Please enter Age");
-         $("#floatingAge").focus();
-         return false;
-      }
-      if (!(GenderRadios[0].checked || GenderRadios[1].checked)) {
-           $("#GenderError").html("Please select gender"); 
-          return false;
-      }
-
-      if(Profession == "")
-      {
-         $("#ProfessionError").html("Please enter Profession");
-         $("#floatingProfession").focus();
-         return false;
-      }
-        var imageUrl = "https://blinkyoureyes.com/beta/email2/zivira/img/logo.png";
-
-       var element = document.getElementById("scorebtn");
-       element.setAttribute("data-bs-toggle", "modal");
-       element.setAttribute("data-bs-target", "#scoreModal");
-             var pdfDoc1=`
-              <img src="${imageUrl}" style="max-width: 60%; height: auto; display: block;align:left; margin: 10 auto;margin-bottom: 20px;" />
-              <table style="width: 100%; border-collapse: collapse; border: 1px solid black;">
-                  <tr>
-                      <td style="border: 1px solid black; padding: 8px;">Full Name :</td>
-                      <td style="border: 1px solid black; padding: 8px;">${FName} ${LName}</td>
-                  </tr>
-                  <tr>
-                      <td style="border: 1px solid black; padding: 8px;">Phone Number :</td>
-                      <td style="border: 1px solid black; padding: 8px;">${Phone}</td>
-                  </tr>
-                  <tr>
-                      <td style="border: 1px solid black; padding: 8px;">Email Address :</td>
-                      <td style="border: 1px solid black; padding: 8px;">${Email}</td>
-                  </tr>
-                  <tr>
-                      <td style="border: 1px solid black; padding: 8px;">Age :</td>
-                      <td style="border: 1px solid black; padding: 8px;">${Age}</td>
-                  </tr>
-                  <tr>
-                      <td style="border: 1px solid black; padding: 8px;">Gender :</td>
-                      <td style="border: 1px solid black; padding: 8px;">${selectedValue}</td>
-                  </tr>
-                  <tr>
-                      <td style="border: 1px solid black; padding: 8px;">Profession :</td>
-                      <td style="border: 1px solid black; padding: 8px;">${Profession}</td>
-                  </tr>
-              </table>
-
-`;
-       
-    $.ajax({
-          url: '/beta/dev/contact.php', // Path to your PHP script
-          type: 'POST',
-          data: formData,
-          success: function(response) {
-              // Handle success response
-              console.log(response); // Log the response
-          },
-          error: function(xhr, status, error) {
-              // Handle error
-              console.log(error); // Log the error
-          }
-      });
-}
-</script>
 
 </body>
 </html>

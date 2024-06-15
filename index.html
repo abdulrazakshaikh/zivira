@@ -8,1458 +8,2799 @@
     <title>Zivira - Homepage</title>
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    
     <link href="https://blinkyoureyes.com/beta/dev/process.php">
-
     <!-- Slider CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
-
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <!-- Animate CSS -->
     <link href="css/animate.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
-    <link href="css/custom.css" rel="stylesheet">
-
+    <link href="css/custom.css?ver=1.5" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    <script src="js/html2pdf.bundle.min.js"></script>
+    <script type="text/javascript">
+    $("#btnPrint").live("click", function() {
 
+
+        var content = document.getElementById('content');
+
+        var Name = document.getElementById("floatingname").value;
+
+
+        var options = {
+
+            margin: 10,
+
+            filename: 'Zivira_' + "report_" + Name + ".pdf",
+
+            image: { type: 'jpeg', quality: 0.98 },
+
+            html2canvas: { scale: 2 },
+
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+
+        };
+
+
+
+        var divResult = $("#pdfresult").html();
+
+        html2pdf()
+
+            .from(divResult)
+
+            .set(options)
+
+            .save();
+
+    });
+    </script>
 </head>
 
 <body>
-  
-<nav class="navbar navbar-header navbar-expand-lg fixed-top" id="navbarHeader">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">
-            <i class="bi bi-list"></i>
-        </button>
-        <a class="navbar-brand" href="index.html">
-            <img src="img/logo.png" class="img-fluid" alt="">
-        </a>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title">Navigation</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-lg-3">
-                    <li class="nav-item active">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about_dry_eyes.html" class="nav-link">About Dry Eyes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="products.html" class="nav-link">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#testeye-section" id="testeye-btn" class="nav-link">Test Your Eye</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact Us</a>
-                    </li>
-                </ul>
-                <a href="index.html#exercise-section" class="btn btn-primary btn-play">Eye Exercises</a>
+    <nav class="navbar navbar-header navbar-expand-lg fixed-top" id="navbarHeader">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">
+                <i class="bi bi-list"></i>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" class="img-fluid" alt="">
+            </a>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Navigation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-lg-3">
+                        <li class="nav-item active">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about_dry_eyes.html" class="nav-link">About Dry Eyes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="products.html" class="nav-link">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#testeye-section" id="testeye-btn" class="nav-link">Test Your Eye</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact Us</a>
+                        </li>
+                    </ul>
+                    <a href="index.html#exercise-section" class="btn btn-primary btn-play">Eye Exercises</a>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
-
-<main class="mainwrapper">
-    <div class="mainbodywrapper">
-      <section class="section section-hero pb-0">
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" style="background-color: #a1f9fe;">
-              <div class="container">
-                <div class="row carousel-caption align-items-center justify-content-center justify-content-lg-between g-0">
-                  <div class="col-12 col-lg-6 order-2 order-lg-1 text-start animated fadeInUpBig">
-                    <h1 class="hero-title">Discover Relief<br>for Dry Eyes</h1>
-                    <p class="hero-subtitle">Find Comfort in Every Blink<br>Say GoodBye to Dry Eyes</p>
-                    <h6 class="hero-highlighttitle">Explore Effective Solution Today</h6>
-                  </div>
-                  <div class="col-12 col-lg-6 order-1 order-lg-2 animated fadeInDownBig  delay-1s">
-                    <div class="carousel-image">
-                      <img src="img/products/Zivifresh_Pack.png" class="img-fluid" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item bg-image-1">
-              <div class="container">
-                <div class="row carousel-caption align-items-lg-center justify-content-center justify-content-lg-between g-0">
-                  <div class="col-12 col-lg-7 order-2 order-lg-1 text-start animated fadeInUpBig">
-                    <h1 class="hero-title text-white">Bring Relief to<br/>Every Blink</h1>
-                    <p class="hero-subtitle text-white">Nurture Beautiful Moment</p>
-                    <h6 class="hero-highlighttitle">EACH TIME EVERY TIME WITH ZIVIRA.</h6>
-                  </div>
-                  <div class="col-12 col-lg-5 order-1 order-lg-2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item bg-image-2">
-              <div class="container">
-                <div class="row carousel-caption align-items-lg-center justify-content-center justify-content-lg-between g-0">
-                  <div class="col-12 col-lg-7 order-2 order-lg-1 text-start animated fadeInUpBig">
-                    <h1 class="hero-title text-white">Zivifresh <br>Helps Relieve</h1>
-                    <p class="hero-subtitle text-white">Restore & Revive Shows good<br>shear Thinning Properties</p>
-                    <h6 class="hero-highlighttitle uppercase">Aids in corneal<br>epithelial wound healing</h6>
-                  </div>
-                  <div class="col-12 col-lg-5 order-1 order-lg-2"></div>
-                </div>
-              </div>
-            </div>
-
-            
-          </div>
-          <button class="carousel-control-prev text-primary" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <i class="bi bi-chevron-left"></i>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next text-primary" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <i class="bi bi-chevron-right"></i>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section>
-      <section class="section section-info">
-        <div class="container">
-          <div class="row g-0">
-            <div class="col-12">
-              <div class="card herocard">
-                <div class="card-body p-0">
-                  <div class="herocardrow row g-0">
-                    <div class="herocarditem col-12 col-md-6 col-lg-3">
-                      <div class="herocarditem_image">
-                        <img src="img/eye_strain.svg" class="img-fluid" alt="">
-                      </div>
-                      <h6 class="herocarditem_title">Dry & Digital Eye Strain</h6>
-                      <p class="herocarditem_desc">Dry eyes and digital eye strain are emerging healthcare problems.</p>
-                    </div>
-                    <div class="herocarditem col-12 col-md-6 col-lg-3">
-                      <div class="herocarditem_image">
-                        <img src="img/symptoms.svg" class="img-fluid" alt="">
-                      </div>
-                      <h6 class="herocarditem_title">Symptoms</h6>
-                      <p class="herocarditem_desc">Don’t let the eye strain define how you see the world. Know the symptoms, and act on time to maintain a healthy view of life.</p>
-                    </div>
-                    <div class="herocarditem col-12 col-md-6 col-lg-3">
-                      <div class="herocarditem_image p-2">
-                        <img src="img/management.svg" class="img-fluid" alt="">
-                      </div>
-                      <h6 class="herocarditem_title">Management</h6>
-                      <p class="herocarditem_desc">Managing dry eye is a long-term process but simple.</p>
-                    </div>
-                    <div class="herocarditem col-12 col-md-6 col-lg-3">
-                      <div class="herocarditem_image p-2">
-                        <img src="img/precautions.svg" class="img-fluid" alt="">
-                      </div>
-                      <h6 class="herocarditem_title">Precautions</h6>
-                      <p class="herocarditem_desc">Dry eye symptoms can be managed by taking a few precautions.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row g-3 counterrow">
-            <div class="counteritem col-12 col-md-6 col-lg-3">
-              <div class="counteritem_image">
-                <img src="img/smile.svg" alt="">
-              </div>
-              <div class="counteritem_content">
-                <h3 class="counteritem_title"><span class="counter" data-target="718">0</span>K+</h3>
-                <h6 class="counteritem_subtitle">Units Sold Every Year</h6>
-              </div>
-            </div>
-            <div class="counteritem col-12 col-md-6 col-lg-3">
-              <div class="counteritem_image">
-                <img src="img/medical.svg" alt="">
-              </div>
-              <div class="counteritem_content">
-                <h3 class="counteritem_title"><span class="counter" data-target="239">0</span>K+</h3>
-                <h6 class="counteritem_subtitle">Patient Served Every Year</h6>
-              </div>
-            </div>
-            <div class="counteritem col-12 col-md-6 col-lg-3">
-              <div class="counteritem_image">
-                <img src="img/product.svg" alt="">
-              </div>
-              <div class="counteritem_content">
-                <h3 class="counteritem_title">Products</h3>
-                <h6 class="counteritem_subtitle">Available Widely</h6>
-              </div>
-            </div>
-            <div class="counteritem col-12 col-md-6 col-lg-3">
-              <div class="counteritem_image">
-                <img src="img/quality.svg" alt="">
-              </div>
-              <div class="counteritem_content">
-                <h3 class="counteritem_title">Quality</h3>
-                <h6 class="counteritem_subtitle">Products at Affordable Price</h6>
-            </div>
-          </div>
-        </div>        
-      </section>
-      <section class="section section-product">
-        <div class="container">
-          <div class="row g-4 justify-content-center">
-            <div class="col-12 col-md-12">
-              <div class="section-heading">
-                <h2 class="section-title"><span class="text-primary">Products</span></h2>
-                <p class="section-subtitle">Our team is dedicated to creating advanced and pioneering ophthalmic products to address various complications caused by dry eye disorders. The product range includes items that target both dry eye disorders and digital eye strain complications. We are committed to minimizing the effects of dry eye and digital eye strain in India, with the ultimate goal of improving patients&#39; quality of life.</p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row g-4">
-                <div class="col-12 col-lg-4">
-                  <div class="card productcard" style="--product-bg : #eaf8ec">
-                    <div class="card-body">
-                      <div class="product-qty">10ml</div>
-                      <h6 class="product-title">Zivifresh</h6>
-                      <p class="product-desc">ZIVIFRESH ® is a sterile lubricant eye drops used to relieve irritation and discomfort due to dryness of the eye.</p>
-                      <a href="product1.html"  class="btn btn-link product-link">Read More</a>
-                    </div>
-                    <div class="card-image">
-                        <img src="img/products/Zivifresh_Pack.png" class="img-fluid">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="card productcard" style="--product-bg : #d5e7f5">
-                    <div class="card-body">
-                      <div class="product-qty">10ml</div>
-                      <h6 class="product-title">Zivifresh Gel</h6>
-                      <p class="product-desc">ZIVIFRESH ® gel eye drop is a sterile lubricant eye drop used to relieve irritation and discomfort due to eye dryness.</p>
-                      <a href="product2.html"  class="btn btn-link product-link">Read More</a>
-                    </div>
-                    <div class="card-image">
-                        <img src="img/products/Zivifresh_Gel_Pack.png" class="img-fluid">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="card productcard" style="--product-bg : #e5edec">
-                    <div class="card-body">
-                      <div class="product-qty">10ml</div>
-                      <h6 class="product-title">Fomira</h6>
-                      <p class="product-desc">FOMIRA ® are lubricant eye drops that protect the eyes from the discomfort associated with dry eyes so that they feel moist and refreshed for a long period...</p>
-                      <a href="product5.html"  class="btn btn-link product-link">Read More</a>
-                    </div>
-                    <div class="card-image">
-                        <img src="img/products/Fomira_Pack.png" class="img-fluid">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 text-center">
-              <a href="products.html" class="btn btn-primary">Show All</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section section-questionaire" id="testeye-section">
-        <div class="container">
-          <div class="row g-0">
-            <div class="col-12 col-lg-6">
-              <div class="questionaire-area">
-                <div class="section-heading align-items-start text-start">
-                  <h2 class="section-title"><span class="text-primary">Testing Eye</span> in Focus</h2>
-                  <p class="section-subtitle">Are there any issues with your vision currently, please give answer to each the questions, even if you do not have any complaints at the moment.</p>
-                </div>
-
-                <div class="questionaire-content" id="QuestionSet">
-                    <div class="questionaire-heading">
-                        <span class="questionaire-num" id="qid">Q1</span>
-                        <span class="questionaire-title" id="question"></span>
-                    </div>
-                    <div class="questionaire-body" id="question-options">
-
-                    </div>
-
-
-                    <div class="questionaire-footer">
-                        <button class="btn btn-primary" id="previous" onclick="prev()" type="button">Previous</button>
-                        <button class="btn btn-primary" id="next" onclick="next()" type="button">Next</button>
-                    </div>
-                </div>
-
-                <!-- FORM -->
-                <div class="questionaire-content" id="ScoreForm">
-                    <div class="questionaire-heading">
-                        <span class="questionaire-title text-muted fw-bold">Fill the form to view your Score</span>
-                    </div>
-                    <div class="questionaire-body">
-                        <div class="row g-3">
-                            <div class="col-12 col-lg-12">
-                                <div class="form-floating form-group mb-0">
-                                    <input class="form-control" id="floatingname" placeholder="placeholder" type="text" 
-                                    oninput="preventNonCharacter(this)">
-                                    <label class="form-label" for="floatingname">Full
-                                        Name</label>
-                                    <span id="NameError" style="color:red"></span>
+    </nav>
+    <main class="mainwrapper">
+        <div class="mainbodywrapper">
+            <section class="section section-hero pb-0">
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active bg-image-0" style="background-color: #a1f9fe;">
+                            <div class="container">
+                                <div class="row carousel-caption align-items-center justify-content-center justify-content-lg-between g-0">
+                                    <div class="col-12 col-lg-6 order-2 order-lg-1 text-start animated fadeInUpBig">
+                                        <h1 class="hero-title">Up to 93% suffer</h1>
+                                        <p class="hero-subtitle">from digital eye strain</p>
+                                        <h6 class="hero-highlighttitle">Are you one of them?</h6>
+                                    </div>
+                                    <div class="col-12 col-lg-6 order-1 order-lg-2"></div>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="form-floating form-group mb-0">
-                                    <input class="form-control" id="floatingPhone"placeholder="placeholder" maxlength="15"  
-                                    oninput="preventNonNumeric(this)">
-                                    <label class="form-label" for="floatingPhone">Phone
-                                        Number</label>
-                                    <span id="PhoneError" style="color:red"></span>
+                        </div>
+                        <div class="carousel-item bg-image-1">
+                            <div class="container">
+                                <div class="row carousel-caption align-items-lg-center justify-content-center justify-content-lg-between g-0">
+                                    <div class="col-12 col-lg-7 order-2 order-lg-1 text-start animated fadeInUpBig">
+                                        <h1 class="hero-title text-white">Blink your eyes and</h1>
+                                        <h6 class="hero-highlighttitle">say goodbye to dry eyes</h6>
+                                    </div>
+                                    <div class="col-12 col-lg-5 order-1 order-lg-2"></div>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="form-floating form-group mb-0">
-                                    <input class="form-control" id="floatingEmail" placeholder="placeholder" type="email" 
-                                    onchange="validateEmail()">
-                                    <label class="form-label" for="floatingEmail">Email
-                                        address</label>
-                                    <span id="EmailError" style="color:red"></span>
+                        </div>
+                        <div class="carousel-item bg-image-2">
+                            <div class="container">
+                                <div class="row carousel-caption align-items-lg-center justify-content-center justify-content-lg-between g-0">
+                                    <div class="col-12 col-lg-7 order-2 order-lg-1 text-start animated fadeInUpBig">
+                                        <h1 class="hero-title text-white">CVS is the most <br>common stress </h1>
+                                        <h6 class="hero-highlighttitle uppercase">injury in the workplace</h6>
+                                    </div>
+                                    <div class="col-12 col-lg-5 order-1 order-lg-2"></div>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="form-floating form-group mb-0">
-                                    <input class="form-control" id="floatingAge" placeholder="placeholder" maxlength="3" 
-                                    oninput="preventNonNumeric(this)">
-                                    <label class="form-label"
-                                           for="floatingAge">Age</label>
-                                    <span id="AgeError" style="color:red"></span>
+                        </div>
+                        <div class="carousel-item bg-image-3">
+                            <div class="container">
+                                <div class="row carousel-caption align-items-lg-center justify-content-center justify-content-lg-between g-0">
+                                    
+                                    <div class="col-12 col-lg-7 order-2 order-lg-1 text-start animated fadeInUpBig">
+                                        <h1 class="hero-title text-black">Things can Change</h1>
+                                        <h6 class="hero-highlighttitle uppercase">in the blink of an eye</h6>
+                                    </div>
+                                    <div class="col-12 col-lg-5 order-1 order-lg-2"></div>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="form-floating form-group mb-0">
-
-                                    <div class="form-check-wrap form-control">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" id="inlineRadio1"
-                                                   name="inlineRadioOptions"
-                                                   type="radio" value="Male">
-                                            <label class="form-check-label"
-                                                   for="inlineRadio1">Male</label>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev text-primary" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                        <i class="bi bi-chevron-left"></i>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next text-primary" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                        <i class="bi bi-chevron-right"></i>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+            <section class="section section-info">
+                <div class="container">
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <div class="card herocard">
+                                <div class="card-body p-0">
+                                    <div class="herocardrow row g-0">
+                                        <div class="herocarditem col-12 col-md-6 col-lg-3">
+                                            <a href="about_dry_eyes.html#dryeye" class="d-flex justify-content-center align-items-center herocarditem-wrap">
+                                                <div class="herocarditem_image">
+                                                    <img src="img/eye_strain.svg" class="img-fluid" alt="">
+                                                </div>
+                                                <h6 class="herocarditem_title">Dry Eyes & Digital Eye Strain</h6>
+                                                <p class="herocarditem_desc">Dry eyes and digital eye strain are emerging healthcare problems.
+                                                </p>
+                                            </a>
                                         </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" id="inlineRadio2"
-                                                   name="inlineRadioOptions"
-                                                   type="radio" value="Female">
-                                            <label class="form-check-label"
-                                                   for="inlineRadio2">Female</label>
+                                        <div class="herocarditem col-12 col-md-6 col-lg-3">
+                                            <a href="about_dry_eyes.html#symptoms" class="d-flex justify-content-center align-items-center herocarditem-wrap">
+                                                <div class="herocarditem_image">
+                                                    <img src="img/symptoms.svg" class="img-fluid  herocarditem-nowrap" alt="">
+                                                </div>
+                                                <h6 class="herocarditem_title">Symptoms</h6>
+                                                <p class="herocarditem_desc">Don’t let the eye strain define how you see the world.
+                                                    <!-- Know the symptoms, and act on time to maintain a healthy view of life. -->
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="herocarditem col-12 col-md-6 col-lg-3">
+                                            <a href="about_dry_eyes.html#management" class="d-flex justify-content-center align-items-center herocarditem-wrap">
+                                                <div class="herocarditem_image p-2">
+                                                    <img src="img/management.svg" class="img-fluid" alt="">
+                                                </div>
+                                                <h6 class="herocarditem_title">Management</h6>
+                                                <p class="herocarditem_desc">Managing dry eye is a long-term process but simple.</p>
+                                            </a>
+                                        </div>
+                                        <div class="herocarditem col-12 col-md-6 col-lg-3">
+                                            <a href="about_dry_eyes.html#precautions" class="d-flex justify-content-center align-items-center herocarditem-wrap">
+                                                <div class="herocarditem_image p-2">
+                                                    <img src="img/precautions.svg" class="img-fluid" alt="">
+                                                </div>
+                                                <h6 class="herocarditem_title">Precautions</h6>
+                                                <p class="herocarditem_desc">Dry eye symptoms can be managed by taking a few precautions.</p>
+                                            </a>
                                         </div>
                                     </div>
-                                    <label class="form-label">Gender</label>
-                                    <span id="GenderError" style="color:red"></span>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-12">
-                                <div class="form-floating form-group mb-0">
-                                    <input class="form-control" id="floatingProfession"
-                                           placeholder="placeholder"
-                                           type="text">
-                                    <label class="form-label" for="floatingProfession">Profession</label>
-                                    <span id="ProfessionError" style="color:red"></span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="questionaire-footer">
-                        <button class="btn btn-primary" id="previousForm" type="button">Previous</button>
-                        <button class="btn btn-primary" id="scorebtn"
-                                onclick="SendMail()" type="button">Get Score
-                        </button>
-                    </div>
-                </div>
-                  
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </section>
-      <section class="section section-video" id="exercise-section">
-        <div class="container">
-          <div class="row g-4 justify-content-center">
-            <div class="col-12 col-md-12">
-              <div class="section-heading">
-                <h2 class="section-title text-white"><span>Eye Exercises</span></h2>
-                <p class="section-subtitle text-white">Moving your body is healthy, so is moving your eyes. Know how to keep your eyes healthy. Your eyes are precious and they deserve being healthy Take the steps to ensure healthy eyes  Beautiful life: Move a step closer to maintaining healthy eyes</p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row g-4">
-                <div class="col-12 col-lg-4">
-                  <!-- <div class="card videocard" data-fancybox data-src="https://vimeo.com/948631215&loop=1"> -->
-                  <div class="card videocard" data-fancybox data-src="https://vimeo.com/948631215&loop=1">
-                    <div class="card-image">
-                      <img class="thumb-image" src="img/exercise1.jpg">
-                    </div>
-                    <div class="card-img-overlay">
-                      <div class="play-icon"><i class="bi bi-play-btn-fill"></i></div>
-                    </div>
-                    <div class="card-body p-2">
-                      <h6 class="video-title fw-bold text-center">Eye Exercise Part 1</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="card videocard " data-fancybox data-src="https://vimeo.com/948634894&loop=1">
-                    <div class="card-image">
-                      <img class="thumb-image" src="img/exercise2.jpg">
-                    </div>
-                    <div class="card-img-overlay">
-                      <div class="play-icon"><i class="bi bi-play-btn-fill"></i></div>
-                    </div>
-                    <div class="card-body p-2">
-                      <h6 class="video-title fw-bold text-center">Eye Exercise Part 2</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="card videocard " data-fancybox data-src="https://vimeo.com/948635834&loop=1">
-                    <div class="card-image">
-                      <img class="thumb-image" src="img/exercise3.jpg">
-                    </div>
-                    <div class="card-img-overlay">
-                      <div class="play-icon"><i class="bi bi-play-btn-fill"></i></div>
-                    </div>
-                    <div class="card-body p-2">
-                      <h6 class="video-title fw-bold text-center">Eye Exercise Part 3</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-<footer class="footer">
-  <div class="container">
-    <div class="row g-3">
-      <div class="col-12">
-        <div class="footer-top-inner">
-          <div class="row">
-            <div class="col-lg-3 col-12">
-              <div class="footer-about-widget">
-                <div class="footer-logo">
-                  <a class="logo" href="index.html"><img src="img/logo.png" class="img-fluid"></a>
-                </div>
-                <hr style="width: 210px;" />
-                <h6 class="footer-about-widget_title">Lighting Up Lives</h6>
-              </div>
-            </div>
-            <div class="col-lg-7 col-12">
-              <div class="row">
-                <div class="col-lg-3 col-6">
-                  <div class="widget-nav_menu">
-                    <h3 class="widget-title">Links</h3>
-                    <ul class="widget-nav_menu-links">
-                      <li class="menu-item">
-                        <a href="about_dry_eyes.html" class="menu-link">About Dry Eyes</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="products.html" class="menu-link">Products</a>
-                      </li>
-                      
-                      <li class="menu-item">
-                        <a href="contact.html" class="menu-link">Contact Us</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="faq.html" class="menu-link">FAQs</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-6">
-                  <div class="widget-nav_menu">
-                    <h3 class="widget-title">Gel</h3>
-                    <ul class="widget-nav_menu-links">
-                      <li class="menu-item">
-                        <a href="product2.html" class="menu-link">Zivifresh Gel</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="product6.html" class="menu-link">Ducira Gel</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="product7.html" class="menu-link">Tizta Liquigel</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="product5.html" class="menu-link">Fomira</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-6">
-                  <div class="widget-nav_menu">
-                    <h3 class="widget-title">Drops</h3>
-                    <ul class="widget-nav_menu-links">
-                      <li class="menu-item">
-                        <a href="product1.html" class="menu-link">Zivifresh</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="product4.html" class="menu-link">Tizta 5ml</a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="product3.html" class="menu-link">Tizta 10ml</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          </div>  
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="copyright__inner">
-              <p class="footer-bottom-text">Copyright &copy;2024 All rights reserved</p>
-              <p class="footer-bottom-text">
-                <a href="privacy_statement.html">Privacy Statement</a>
-                <span>|</span>
-                <a href="terms_of_use.html">Terms of use</a>
-                <span>|</span>
-                <a href="report_an_adverse_event.html">Report an Adverse Event</a>
-                <span>|</span>
-                <a href="cookie_policy.html">Cookie Policy</a>
-                <span>|</span>
-                <a href="safety_information.html">Safety Information</a>
-              </p>
-            </div>
-          </div>
-      </div>
-    </div>  
-  </div>
-</footer>
-
-</main>
-
-
-<!-- Modal -->
-<div aria-hidden="true" class="modal fade score-modal" id="scoreModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content text-center">
-            <div class="modal-header border-0">
-                <button aria-label="Close" class="btn-close" onclick="refreshPage()" data-bs-dismiss="modal" type="button">
-                    <span class="material-icons-outlined">close</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <div class="result-icon">
-                            <img alt="" src="img/result-icon.svg">
+                    <div class="row g-3 counterrow">
+                        <div class="counteritem col-12 col-md-6 col-lg-3">
+                            <div class="counteritem_image">
+                                <img src="img/smile.svg" alt="">
+                            </div>
+                            <div class="counteritem_content">
+                                <h3 class="counteritem_title"><span class="counter" data-target="718">0</span>K+</h3>
+                                <h6 class="counteritem_subtitle">Units Sold Every Year</h6>
+                            </div>
+                        </div>
+                        <div class="counteritem col-12 col-md-6 col-lg-3">
+                            <div class="counteritem_image">
+                                <img src="img/product.svg" alt="">
+                            </div>
+                            <div class="counteritem_content">
+                                <h3 class="counteritem_title">Products</h3>
+                                <h6 class="counteritem_subtitle">Available Widely</h6>
+                            </div>
+                        </div>
+                        <div class="counteritem col-12 col-md-6 col-lg-3">
+                            <div class="counteritem_image">
+                                <img src="img/medical.svg" alt="">
+                            </div>
+                            <div class="counteritem_content">
+                                <h3 class="counteritem_title"><span class="counter" data-target="239">0</span>K+</h3>
+                                <h6 class="counteritem_subtitle">Patient Served Every Year</h6>
+                            </div>
+                        </div>
+                        <div class="counteritem col-12 col-md-6 col-lg-3">
+                            <div class="counteritem_image">
+                                <img src="img/quality.svg" alt="">
+                            </div>
+                            <div class="counteritem_content">
+                                <h3 class="counteritem_title">Quality</h3>
+                                <h6 class="counteritem_subtitle">Products at Affordable Price</h6>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12">
-
-                        <div id="result">
-
+            </section>
+            <section class="section section-product">
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-12 col-md-12">
+                            <div class="section-heading text-left">
+                                <h2 class="section-title text-left b-4"><span class="text-primary">Products</span></h2>
+                                
+                                <p style="text-align: justify;" class="mt-5">Zivira Labs is an Indian global pharmaceutical company specialized in eye care products. We offer a
+                                    comprehensive range of products catering to the needs of various eye ailments. Driven by our values of
+                                    providing quality medicines at a patient friendly price with special focus on dry eye management, we
+                                    deliver premium value to patients and intend to have a positive impact on the ophthal industry. </p>
+                                
+                                    <p style="text-align: justify;">Our exceptional team is dedicated to creating advanced and pioneering
+                                        ophthalmic products to address various complications caused by dry eye disorders. The product range
+                                        includes Zivifresh, Zivifresh Gel, Tizta, Fomira, Ducira Gel, and Titza Liquigel that target both dry
+                                        eye disorders and digital eye strain complications. We are committed to minimizing the effects of dry
+                                        eye and digital eye strain in India, with the ultimate goal of improving patients' quality of life.
+                                    </p>
+                            </div>
                         </div>
-
-                        <h3 id="Resultid" class="result-text"></h3>
+                        <div class="col-12">
+                            <div class="row g-4">
+                                <div class="col-12 col-lg-4">
+                                    <a href="product1.html" >
+                                    <div class="card productcard" style="--product-bg : #eaf8ec">
+                                        <div class="card-body">
+                                            <div class="product-qty">10ml</div>
+                                            <h6 class="product-title">Zivifresh</h6>
+                                            <p class="product-desc">ZIVIFRESH ® is a sterile lubricant eye drops used to relieve irritation
+                                                and discomfort due to dryness of the eye.</p>
+                                            <div class="btn btn-link product-link">Read More</div>
+                                        </div>
+                                        <div class="card-image">
+                                            <img src="img/products/Zivifresh_Pack.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <a href="product1.html" >
+                                    <div class="card productcard" style="--product-bg : #d5e7f5">
+                                        <div class="card-body">
+                                            <div class="product-qty">10ml</div>
+                                            <h6 class="product-title">Zivifresh Gel</h6>
+                                            <p class="product-desc">ZIVIFRESH ® gel eye drop is a sterile lubricant eye drop used to relieve
+                                                irritation and discomfort due to eye dryness.</p>
+                                            <div class="btn btn-link product-link">Read More</div>
+                                        </div>
+                                        <div class="card-image">
+                                            <img src="img/products/Zivifresh_Gel_Pack.png" class="img-fluid">
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <a href="product5.html" >
+                                    <div class="card productcard" style="--product-bg : #e5edec">
+                                        <div class="card-body">
+                                            <div class="product-qty">10ml</div>
+                                            <h6 class="product-title">Fomira</h6>
+                                            <p class="product-desc">FOMIRA ® are lubricant eye drops that protect the eyes from the discomfort
+                                                associated with dry eyes so that they feel moist and refreshed for a long period...</p>
+                                                <div class="btn btn-link product-link">Read More</div>
+                                        </div>
+                                        <div class="card-image">
+                                            <img src="img/products/Fomira_Pack.png" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <a href="products.html" class="btn btn-primary">Show All</a>
+                        </div>
                     </div>
-                    <div class="col-12 text-center">
-                        <button class="btn btn-primary btn-icon m-auto py-2 px-3" id="btnPrint">
-                            <span class="material-icons-outlined icon">file_download</span>
-                            <span class="btn-text">Download the Result</span>
-                        </button>
+                </div>
+            </section>
+            <section class="section section-questionaire" id="testeye-section">
+                <div class="container">
+                    <div class="row g-0">
+                        <div class="col-12 col-lg-12">
+                            <div class="questionaire-area">
+                                <div class="section-heading align-items-start text-start">
+                                    <h2 class="section-title"><span class="text-primary">Testing Eye</span> in Focus</h2>
+                                    <p class="section-subtitle">Are there any issues with your vision currently, please give answer to
+                                        each the questions, even if you do not have any complaints at the moment.</p>
+                                </div>
+                                <div class="questionaire-content">
+                                    
+                                    <!-- QUESTION 1 -->
+                                    <div class="questionaire-heading">
+                                        <span class="questionaire-num">1.</span>
+                                        <div class="questionaire-texthead">
+                                        <span class="questionaire-title">Commonly Used Devices ?</span>
+                                        </div>
+                                    </div>
+                                    <div class="questionaire-body">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                  <label class="form-check-label" for="inlineCheckbox1">
+                                                    Desktop
+                                                  </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                                  <label class="form-check-label" for="inlineCheckbox2">
+                                                    Laptop
+                                                  </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                                  <label class="form-check-label" for="inlineCheckbox3">
+                                                    Smartphone
+                                                  </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                                                  <label class="form-check-label" for="inlineCheckbox4">
+                                                    Television
+                                                  </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- QUESTION 2 -->
+                                    <!-- <div class="questionaire-heading">
+                                        <span class="questionaire-num">2.</span>
+                                        <div class="questionaire-texthead">
+                                        <span class="questionaire-title">Hours spend on each devices ?</span>
+                                        </div>
+                                    </div>
+                                    <div class="questionaire-body">
+                                    	<div class="subquestion">
+                                    		<h6 class="questionaire-label">Desktop : </h6>
+                                    		<div class="subquestion-options">
+	                                    		<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+												  <label class="form-check-label" for="inlineRadio1">
+												    1 to 2hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+												  <label class="form-check-label" for="inlineRadio2">
+												    2 to 3hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio3" name="inlineRadioOptions" value="option3">
+												  <label class="form-check-label" for="inlineRadio3">
+												    3 to 4hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio4" name="inlineRadioOptions" value="option4">
+												  <label class="form-check-label" for="inlineRadio4">
+												    4 to 5hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio5" name="inlineRadioOptions" value="option5">
+												  <label class="form-check-label" for="inlineRadio5">
+												    5 to 6hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio6" name="inlineRadioOptions" value="option6">
+												  <label class="form-check-label" for="inlineRadio6">
+												    6+ hrs
+												  </label>
+												</div>
+											</div>
+                                    	</div>
+                                    	<div class="subquestion">
+                                    		<h6 class="questionaire-label">Laptop : </h6>
+                                    		<div class="subquestion-options">
+	                                    		<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+												  <label class="form-check-label" for="inlineRadio1">
+												    1 to 2hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+												  <label class="form-check-label" for="inlineRadio2">
+												    2 to 3hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio3" name="inlineRadioOptions" value="option3">
+												  <label class="form-check-label" for="inlineRadio3">
+												    3 to 4hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio4" name="inlineRadioOptions" value="option4">
+												  <label class="form-check-label" for="inlineRadio4">
+												    4 to 5hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio5" name="inlineRadioOptions" value="option5">
+												  <label class="form-check-label" for="inlineRadio5">
+												    5 to 6hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio6" name="inlineRadioOptions" value="option6">
+												  <label class="form-check-label" for="inlineRadio6">
+												    6+ hrs
+												  </label>
+												</div>
+											</div>
+                                    	</div>
+                                    	<div class="subquestion">
+                                    		<h6 class="questionaire-label">Smartphone : </h6>
+                                    		<div class="subquestion-options">
+	                                    		<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+												  <label class="form-check-label" for="inlineRadio1">
+												    1 to 2hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+												  <label class="form-check-label" for="inlineRadio2">
+												    2 to 3hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio3" name="inlineRadioOptions" value="option3">
+												  <label class="form-check-label" for="inlineRadio3">
+												    3 to 4hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio4" name="inlineRadioOptions" value="option4">
+												  <label class="form-check-label" for="inlineRadio4">
+												    4 to 5hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio5" name="inlineRadioOptions" value="option5">
+												  <label class="form-check-label" for="inlineRadio5">
+												    5 to 6hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio6" name="inlineRadioOptions" value="option6">
+												  <label class="form-check-label" for="inlineRadio6">
+												    6+ hrs
+												  </label>
+												</div>
+											</div>
+                                    	</div>
+                                    	<div class="subquestion">
+                                    		<h6 class="questionaire-label">Television : </h6>
+                                    		<div class="subquestion-options">
+	                                    		<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+												  <label class="form-check-label" for="inlineRadio1">
+												    1 to 2hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+												  <label class="form-check-label" for="inlineRadio2">
+												    2 to 3hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio3" name="inlineRadioOptions" value="option3">
+												  <label class="form-check-label" for="inlineRadio3">
+												    3 to 4hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio4" name="inlineRadioOptions" value="option4">
+												  <label class="form-check-label" for="inlineRadio4">
+												    4 to 5hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio5" name="inlineRadioOptions" value="option5">
+												  <label class="form-check-label" for="inlineRadio5">
+												    5 to 6hrs
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" id="inlineRadio6" name="inlineRadioOptions" value="option6">
+												  <label class="form-check-label" for="inlineRadio6">
+												    6+ hrs
+												  </label>
+												</div>
+											</div>
+                                    	</div>
+                                    </div> -->
+
+                                    <!-- QUESTION 3 -->
+                                    <!-- <div class="questionaire-heading">
+                                        <span class="questionaire-num">3.</span>
+                                        <div class="questionaire-texthead">
+                                        <span class="questionaire-title">How is the use of these devices ?</span>
+                                        </div>
+                                    </div>
+                                    <div class="questionaire-body">
+                                        <div class="subquestion">
+                                            <h6 class="questionaire-label">Desktop : </h6>
+                                            <div class="subquestion-options">
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                  <label class="form-check-label" for="inlineRadio1">
+                                                    Continuously
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+                                                  <label class="form-check-label" for="inlineRadio2">
+                                                    Interrupted
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio3" name="inlineRadioOptions" value="option3">
+                                                  <label class="form-check-label" for="inlineRadio3">
+                                                    Mostly Day
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio4" name="inlineRadioOptions" value="option4">
+                                                  <label class="form-check-label" for="inlineRadio4">
+                                                    Mostly Night
+                                                  </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="subquestion">
+                                            <h6 class="questionaire-label">Laptop : </h6>
+                                            <div class="subquestion-options">
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                  <label class="form-check-label" for="inlineRadio1">
+                                                    Continuously
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+                                                  <label class="form-check-label" for="inlineRadio2">
+                                                    Interrupted
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio3" name="inlineRadioOptions" value="option3">
+                                                  <label class="form-check-label" for="inlineRadio3">
+                                                    Mostly Day
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio4" name="inlineRadioOptions" value="option4">
+                                                  <label class="form-check-label" for="inlineRadio4">
+                                                    Mostly Night
+                                                  </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="subquestion">
+                                            <h6 class="questionaire-label">Smartphone : </h6>
+                                            <div class="subquestion-options">
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                  <label class="form-check-label" for="inlineRadio1">
+                                                    Continuously
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+                                                  <label class="form-check-label" for="inlineRadio2">
+                                                    Interrupted
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio3" name="inlineRadioOptions" value="option3">
+                                                  <label class="form-check-label" for="inlineRadio3">
+                                                    Mostly Day
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio4" name="inlineRadioOptions" value="option4">
+                                                  <label class="form-check-label" for="inlineRadio4">
+                                                    Mostly Night
+                                                  </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="subquestion">
+                                            <h6 class="questionaire-label">Television : </h6>
+                                            <div class="subquestion-options">
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                  <label class="form-check-label" for="inlineRadio1">
+                                                    Continuously
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+                                                  <label class="form-check-label" for="inlineRadio2">
+                                                    Interrupted
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio3" name="inlineRadioOptions" value="option3">
+                                                  <label class="form-check-label" for="inlineRadio3">
+                                                    Mostly Day
+                                                  </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio4" name="inlineRadioOptions" value="option4">
+                                                  <label class="form-check-label" for="inlineRadio4">
+                                                    Mostly Night
+                                                  </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+
+
+                                    <!-- QUESTION 4 -->
+                                    <!-- <div class="questionaire-heading">
+                                        <span class="questionaire-num">4.</span>
+                                        <div class="questionaire-texthead">
+                                            <span class="questionaire-title">How is the use of these devices ?</span>
+                                            <span class="questionaire-subtitle">please mark 'Yes' or 'No' for each, and if 'Yes' rate the severity from 1(mild) to 5(severe): </span>
+                                        </div>
+                                    </div>
+                                    <div class="questionaire-body">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-6">
+                                                <div class="subquestion">
+                                                    <h6 class="questionaire-label">Dryness : </h6>
+                                                    <div class="subquestion-options">
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                          <label class="form-check-label" for="inlineRadio1">
+                                                            No
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+                                                          <label class="form-check-label" for="inlineRadio2">
+                                                            Yes
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="" class="form-label">Rate</label>
+                                                            <select class="form-control form-select" disabled>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="subquestion">
+                                                    <h6 class="questionaire-label">Redness : </h6>
+                                                    <div class="subquestion-options">
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                          <label class="form-check-label" for="inlineRadio1">
+                                                            No
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+                                                          <label class="form-check-label" for="inlineRadio2">
+                                                            Yes
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="" class="form-label">Rate</label>
+                                                            <select class="form-control form-select">
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="subquestion">
+                                                    <h6 class="questionaire-label">Burning Sensation : </h6>
+                                                    <div class="subquestion-options">
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                          <label class="form-check-label" for="inlineRadio1">
+                                                            No
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+                                                          <label class="form-check-label" for="inlineRadio2">
+                                                            Yes
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="" class="form-label">Rate</label>
+                                                            <select class="form-control form-select">
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="subquestion">
+                                                    <h6 class="questionaire-label">Itchiness : </h6>
+                                                    <div class="subquestion-options">
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                          <label class="form-check-label" for="inlineRadio1">
+                                                            No
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+                                                          <label class="form-check-label" for="inlineRadio2">
+                                                            Yes
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="" class="form-label">Rate</label>
+                                                            <select class="form-control form-select">
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="subquestion">
+                                                    <h6 class="questionaire-label">Grittiness : </h6>
+                                                    <div class="subquestion-options">
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                          <label class="form-check-label" for="inlineRadio1">
+                                                            No
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+                                                          <label class="form-check-label" for="inlineRadio2">
+                                                            Yes
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="" class="form-label">Rate</label>
+                                                            <select class="form-control form-select">
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="subquestion">
+                                                    <h6 class="questionaire-label">Watery Eyes : </h6>
+                                                    <div class="subquestion-options">
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                          <label class="form-check-label" for="inlineRadio1">
+                                                            No
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option2">
+                                                          <label class="form-check-label" for="inlineRadio2">
+                                                            Yes
+                                                          </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="" class="form-label">Rate</label>
+                                                            <select class="form-control form-select">
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                                <option value="">5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+
+                                    <!-- QUESTION 5 -->
+                                    <!-- <div class="questionaire-heading">
+                                        <span class="questionaire-num">5.</span>
+                                        <div class="questionaire-texthead">
+                                        <span class="questionaire-title">Do you have a history of dry eyes ?</span>
+                                        </div>
+                                    </div>
+                                    <div class="questionaire-body">
+                                        <div class="row">
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                  <label class="form-check-label" for="inlineRadio1">
+                                                    No
+                                                  </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option1">
+                                                  <label class="form-check-label" for="inlineRadio2">
+                                                    Yes
+                                                  </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+
+                                    <!-- QUESTION 6 -->
+                                    <!-- <div class="questionaire-heading">
+                                        <span class="questionaire-num">6.</span>
+                                        <div class="questionaire-texthead">
+                                        <span class="questionaire-title">Do you wear glasses or contact lens ?</span>
+                                        </div>
+                                    </div>
+                                    <div class="questionaire-body">
+                                        <div class="row">
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio1" name="inlineRadioOptions" value="option1">
+                                                  <label class="form-check-label" for="inlineRadio1">
+                                                    No
+                                                  </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" id="inlineRadio2" name="inlineRadioOptions" value="option1">
+                                                  <label class="form-check-label" for="inlineRadio2">
+                                                    Yes
+                                                  </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="questionaire-footer">
+                                        <button class="btn btn-primary" id="previous" onclick="prev()" type="button">Previous</button>
+                                        <button class="btn btn-primary" id="next" onclick="next()" type="button">Next</button>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- FORM -->
+                                <!-- <div class="questionaire-content" id="ScoreForms">
+                                    <div class="questionaire-heading">
+                                        <span class="questionaire-title">Fill the form to view your Score</span>
+                                    </div>
+                                    <div class="questionaire-body">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-lg-6">
+                                                <div class="form-group">
+                                                <div class="form-floating">
+                                                    <input class="form-control" id="floatingname" placeholder="placeholder" type="text" oninput="preventNonCharacter(this)">
+                                                    <label class="form-label" for="floatingname">Full Name</label>
+                                                    <span id="NameError" style="color:red"></span>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3">
+                                                <div class="form-group">
+                                                <div class="form-floating">
+                                                    <input class="form-control" id="floatingPhone" placeholder="placeholder" maxlength="15" oninput="preventNonNumeric(this)">
+                                                    <label class="form-label" for="floatingPhone">Phone Number</label>
+                                                    <span id="PhoneError" style="color:red"></span>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3">
+                                                <div class="form-group">
+                                                <div class="form-floating">
+                                                    <input class="form-control" id="floatingEmail" placeholder="placeholder" type="email" onchange="validateEmail()">
+                                                    <label class="form-label" for="floatingEmail">Email Address</label>
+                                                    <span id="EmailError" style="color:red"></span>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="form-group">
+                                                <div class="form-floating">
+                                                    <input class="form-control" id="floatingProfession" placeholder="placeholder" type="text">
+                                                    <label class="form-label" for="floatingProfession">Profession</label>
+                                                    <span id="ProfessionError" style="color:red"></span>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3">
+                                                <div class="form-group">
+                                                <div class="form-floating">
+                                                    <input class="form-control" id="floatingAge" placeholder="placeholder" maxlength="3" oninput="preventNonNumeric(this)">
+                                                    <label class="form-label" for="floatingAge">Age</label>
+                                                    <span id="AgeError" style="color:red"></span>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3">
+                                                <div class="form-group">
+                                                <div class="form-floating">
+                                                    <div class="form-check-wrap form-control">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" id="inlineRadio1" name="inlineRadioOptions" type="radio" value="Male">
+                                                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" id="inlineRadio2" name="inlineRadioOptions" type="radio" value="Female">
+                                                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                                                        </div>
+                                                    </div>
+                                                    <label class="form-label">Gender</label>
+                                                    <span id="GenderError" style="color:red"></span>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="questionaire-footer">
+                                        <button class="btn btn-primary" id="previousForm" type="button">Previous</button>
+                                        <button class="btn btn-primary" id="scorebtn" onclick="SendMail()" type="button">Finish
+                                        </button>
+                                    </div>
+                                </div> -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-video" id="exercise-section">
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-12 col-md-12">
+                            <div class="section-heading">
+                                <h2 class="section-title text-white"><span>Eye Exercises</span></h2>
+                                <p class="section-subtitle text-white">Moving your body is healthy, so is moving your eyes. Know how to keep your eyes healthy. Your eyes are precious and they deserve being healthy – Take the steps to ensure healthy eyes Healthy eyes – beautiful life: Move a step closer to maintaining healthy eyes</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row g-4">
+                                <div class="col-12 col-lg-4">
+                                    <div class="card videocard" data-fancybox data-src="https://vimeo.com/948631215&loop=1">
+                                        <div class="card-image">
+                                            <img class="thumb-image" src="img/exercise1.jpg">
+                                        </div>
+                                        <div class="card-img-overlay">
+                                            <div class="play-icon"><i class="bi bi-play-btn-fill"></i></div>
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <h6 class="video-title fw-bold text-center">Eye Exercise Part 1</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="card videocard " data-fancybox data-src="https://vimeo.com/948634894&loop=1">
+                                        <div class="card-image">
+                                            <img class="thumb-image" src="img/exercise2.jpg">
+                                        </div>
+                                        <div class="card-img-overlay">
+                                            <div class="play-icon"><i class="bi bi-play-btn-fill"></i></div>
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <h6 class="video-title fw-bold text-center">Eye Exercise Part 2</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="card videocard " data-fancybox data-src="https://vimeo.com/948635834&loop=1">
+                                        <div class="card-image">
+                                            <img class="thumb-image" src="img/exercise3.jpg">
+                                        </div>
+                                        <div class="card-img-overlay">
+                                            <div class="play-icon"><i class="bi bi-play-btn-fill"></i></div>
+                                        </div>
+                                        <div class="card-body p-2">
+                                            <h6 class="video-title fw-bold text-center">Eye Exercise Part 3</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="footer-top-inner">
+                            <div class="row">
+                                <div class="col-lg-3 col-12">
+                                    <div class="footer-about-widget">
+                                        <div class="footer-logo">
+                                            <a class="logo" href="index.html"><img src="img/logo.png" class="img-fluid"></a>
+                                        </div>
+                                        <hr style="width: 210px;" />
+                                        <h6 class="footer-about-widget_title">Lighting Up Lives</h6>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-12">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-6">
+                                            <div class="widget-nav_menu">
+                                                <h3 class="widget-title">Links</h3>
+                                                <ul class="widget-nav_menu-links">
+                                                    <li class="menu-item">
+                                                        <a href="about_dry_eyes.html" class="menu-link">About Dry Eyes</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="products.html" class="menu-link">Products</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="contact.html" class="menu-link">Contact Us</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="faq.html" class="menu-link">FAQs</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="other_resources.html" class="menu-link">Other Resources</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-6">
+                                            <div class="widget-nav_menu">
+                                                <h3 class="widget-title">Gel</h3>
+                                                <ul class="widget-nav_menu-links">
+                                                    <li class="menu-item">
+                                                        <a href="product2.html" class="menu-link">Zivifresh Gel</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="product6.html" class="menu-link">Ducira Gel</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="product7.html" class="menu-link">Tizta Liquigel</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="product5.html" class="menu-link">Fomira</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-6">
+                                            <div class="widget-nav_menu">
+                                                <h3 class="widget-title">Drops</h3>
+                                                <ul class="widget-nav_menu-links">
+                                                    <li class="menu-item">
+                                                        <a href="product1.html" class="menu-link">Zivifresh</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="product4.html" class="menu-link">Tizta 5ml</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="product3.html" class="menu-link">Tizta 10ml</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright__inner">
+                                <p class="footer-bottom-text">Copyright &copy;2024 All rights reserved</p>
+                                <p class="footer-bottom-text">
+                                    <a href="privacy_statement.html">Privacy Statement</a>
+                                    <span>|</span>
+                                    <a href="terms_of_use.html">Terms of use</a>
+                                    <span>|</span>
+                                    <a href="report_an_adverse_event.html">Report an Adverse Event</a>
+                                    <span>|</span>
+                                    <a href="cookie_policy.html">Cookie Policy</a>
+                                    <span>|</span>
+                                    <a href="safety_information.html">Safety Information</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- Modal -->
+    <div aria-hidden="true" class="modal fade score-modal" id="scoreModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header border-0">
+                    <button aria-label="Close" class="btn-close" onclick="refreshPage()" data-bs-dismiss="modal" type="button">
+                        <span class="material-icons-outlined">close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="result-icon">
+                                <img alt="" src="img/result-icon.svg">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div id="result">
+                            </div>
+                            <h3 id="Resultid" class="result-text"></h3>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn btn-primary btn-icon m-auto py-2 px-3" id="btnPrint">
+                                <span class="material-icons-outlined icon">file_download</span>
+                                <span class="btn-text">Download the Report</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<div id="pdfresult" style="display:none"></div>
-
-<!-- Jquery -->
-<script src="js/jquery-3.7.1.min.js"></script>
-
-<!-- Bootstrap JS -->
-<script src="js/bootstrap.bundle.min.js"></script>
-
-<!-- Slider JS -->
-<script src="js/owl.carousel.min.js"></script>
-
-<!-- Custom JS -->
-<script src="js/script.js"></script>
-
-<script src="js/jquery.fancybox.min.js"></script>
-
-<script src="js/html2pdf.bundle.min.js"></script>
-
-<script type="text/javascript">
-
-    $("#btnPrint").live("click", function () {
-         // Get the HTML content to be converted
-      var content = document.getElementById('content');
-      var Name = document.getElementById("floatingname").value;
-    // Configure the options for conversion
-
-    var options = {
-        margin: 10,
-        filename:'Zivira_'+"report_"+Name+".pdf" ,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-
-    // Convert HTML to PDF
-    var divResult = $("#pdfresult").html();
-    html2pdf()
-        .from(divResult)
-        .set(options)
-        .save();
-    });
-</script>
-
-<script>
+    <div id="pdfresult" style="display:none"></div>
+    <!-- Jquery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Slider JS -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script>
     $(document).ready(function() {
-    $("#ScoreForm").hide();
-    $("#QuestionSet").show();
-      // Initialize FancyBox
-      $('[data-fancybox]').fancybox({
-        animationEffect: "fade",
-        transitionEffect: "slide",
-        buttons: [
-          "zoom",
-          "slideShow",
-          "fullScreen",
-          "download",
-          "thumbs",
-          "close"
-        ]
-      });
+
+        $("#ScoreForm").hide();
+
+        $("#QuestionSet").show();
+
+
+        $('[data-fancybox]').fancybox({
+
+            animationEffect: "fade",
+
+            transitionEffect: "slide",
+
+            buttons: [
+
+                "zoom",
+
+                "slideShow",
+
+                "fullScreen",
+
+                "download",
+
+                "thumbs",
+
+                "close"
+
+            ]
+
+        });
+
     });
+
+
 
     function preventNonCharacter(input) {
-            const value = input.value;
-            input.value = value.replace(/[^a-zA-Z\s'-]/g, '');
-        }
+
+        const value = input.value;
+
+        input.value = value.replace(/[^a-zA-Z\s'-]/g, '');
+
+    }
+
+
 
     function preventNonNumeric(input) {
-            const value = input.value;
-            input.value = value.replace(/[^0-9]/g, '');
-        }
+
+        const value = input.value;
+
+        input.value = value.replace(/[^0-9]/g, '');
+
+    }
+
+
 
     function refreshPage() {
-            location.reload();
-        }
+
+        location.reload();
+
+    }
+
+
 
     function validateEmail() {
-            const email = document.getElementById('floatingEmail').value;
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-            if (emailPattern.test(email)) {
-                $("#EmailError").html("");
-            } else {
-                $("#EmailError").html("Please enter a valid email address.");
-                document.getElementById('floatingEmail').value = "";
-                $("#floatingemail").focus();
-            }
+        const email = document.getElementById('floatingEmail').value;
+
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+
+
+        if (emailPattern.test(email)) {
+
+            $("#EmailError").html("");
+
+        } else {
+
+            $("#EmailError").html("Please enter a valid email address.");
+
+            document.getElementById('floatingEmail').value = "";
+
+            $("#floatingemail").focus();
+
         }
 
-    var pdfDoc=""
-    function SendMail(){
-
-    var Name = document.getElementById("floatingname").value;
-    var Phone = document.getElementById("floatingPhone").value;
-    var Email = document.getElementById("floatingEmail").value;
-    var Age = document.getElementById("floatingAge").value;
-    var GenderRadios = document.getElementsByName("inlineRadioOptions");
-    var Profession = document.getElementById("floatingProfession").value;
-    //var divResult = $("#pdfresult").html();
-
-    let selectedValue;
-    for (const radio of GenderRadios) {
-        if (radio.checked) {
-            selectedValue = radio.value;
-            break;
-        }
     }
 
-      $("#NameError").html("");
-      $("#EmailError").html("");
-      $("#PhoneError").html("");
-      $("#AgeError").html("");
-      $("#GenderError").html("");
-      $("#ProfessionError").html("");
 
-      if(Name == ""){
-         $("#NameError").html("Please enter full name");
-         $("#floatingname").focus();
-          return false;
-      }
 
-      if(Phone == "")
-      {
-         $("#PhoneError").html("Please enter phone");
-         $("#floatingphone").focus();
-         return false;
-      }
+    var pdfDoc = ""
 
-      if(Email == "")
-      {
-         $("#EmailError").html("Please enter email");
-         $("#floatingemail").focus();
-         return false;
-      }
+    function SendMail() {
 
-      if(Age == "")
-      {
-         $("#AgeError").html("Please enter Age");
-         $("#floatingAge").focus();
-         return false;
-      }
-      if (!(GenderRadios[0].checked || GenderRadios[1].checked)) {
-           $("#GenderError").html("Please select gender"); 
-          return false;
-      }
 
-      if(Profession == "")
-      {
-         $("#ProfessionError").html("Please enter Profession");
-         $("#floatingProfession").focus();
-         return false;
-      }
-        var imageUrl = "https://blinkyoureyes.com/beta/email2/zivira/img/logo.png";
 
-       var element = document.getElementById("scorebtn");
-       element.setAttribute("data-bs-toggle", "modal");
-       element.setAttribute("data-bs-target", "#scoreModal");
-             var pdfDoc1=`
+        var Name = document.getElementById("floatingname").value;
+
+        var Phone = document.getElementById("floatingPhone").value;
+
+        var Email = document.getElementById("floatingEmail").value;
+
+        var Age = document.getElementById("floatingAge").value;
+
+        var GenderRadios = document.getElementsByName("inlineRadioOptions");
+
+        var Profession = document.getElementById("floatingProfession").value;
+
+
+        let selectedValue;
+
+        for (const radio of GenderRadios) {
+
+            if (radio.checked) {
+
+                selectedValue = radio.value;
+
+                break;
+
+            }
+
+        }
+
+
+
+        $("#NameError").html("");
+
+        $("#EmailError").html("");
+
+        $("#PhoneError").html("");
+
+        $("#AgeError").html("");
+
+        $("#GenderError").html("");
+
+        $("#ProfessionError").html("");
+
+
+
+        if (Name == "") {
+
+            $("#NameError").html("Please enter full name");
+
+            $("#floatingname").focus();
+
+            return false;
+
+        }
+
+
+
+        if (Phone == "") {
+
+            $("#PhoneError").html("Please enter phone");
+
+            $("#floatingphone").focus();
+
+            return false;
+
+        }
+
+
+
+        if (Email == "") {
+
+            $("#EmailError").html("Please enter email");
+
+            $("#floatingemail").focus();
+
+            return false;
+
+        }
+
+
+
+        if (Age == "") {
+
+            $("#AgeError").html("Please enter Age");
+
+            $("#floatingAge").focus();
+
+            return false;
+
+        }
+
+        if (!(GenderRadios[0].checked || GenderRadios[1].checked)) {
+
+            $("#GenderError").html("Please select gender");
+
+            return false;
+
+        }
+
+
+
+        if (Profession == "") {
+
+            $("#ProfessionError").html("Please enter Profession");
+
+            $("#floatingProfession").focus();
+
+            return false;
+
+        }
+
+        var imageUrl = "https://blinkyoureyes.com/beta/dev/img/logo.png";
+
+
+
+        var element = document.getElementById("scorebtn");
+
+        element.setAttribute("data-bs-toggle", "modal");
+
+        element.setAttribute("data-bs-target", "#scoreModal");
+
+        var pdfDoc1 = `
+
               <img src="${imageUrl}" style="max-width: 60%; height: auto; display: block;align:left; margin: 10 auto;margin-bottom: 20px;" />
+
 <table style="width: 100%; border-collapse: collapse; border: 1px solid black;">
+
     <tr>
+
         <td style="border: 1px solid black; padding: 8px;">Full Name :</td>
+
         <td style="border: 1px solid black; padding: 8px;">${Name}</td>
+
     </tr>
+
     <tr>
+
         <td style="border: 1px solid black; padding: 8px;">Phone Number :</td>
+
         <td style="border: 1px solid black; padding: 8px;">${Phone}</td>
+
     </tr>
+
     <tr>
+
         <td style="border: 1px solid black; padding: 8px;">Email Address :</td>
+
         <td style="border: 1px solid black; padding: 8px;">${Email}</td>
+
     </tr>
+
     <tr>
+
         <td style="border: 1px solid black; padding: 8px;">Age :</td>
+
         <td style="border: 1px solid black; padding: 8px;">${Age}</td>
+
     </tr>
+
     <tr>
+
         <td style="border: 1px solid black; padding: 8px;">Gender :</td>
+
         <td style="border: 1px solid black; padding: 8px;">${selectedValue}</td>
+
     </tr>
+
     <tr>
+
         <td style="border: 1px solid black; padding: 8px;">Profession :</td>
+
         <td style="border: 1px solid black; padding: 8px;">${Profession}</td>
+
     </tr>
+
 </table>
 
+
+
 `;
-$("#pdfresult").html(pdfDoc.replace("===========", pdfDoc1));
+
+        $("#pdfresult").html(pdfDoc.replace("===========", pdfDoc1));
+
         var modal = new bootstrap.Modal(document.getElementById('scoreModal'));
+
         modal.show();
-    var stringHtml=pdfDoc1
-    var formData = {
-          name: Name,
-          phone: Phone,
-          email: Email,
-          htmlData: stringHtml,
-          htmlData1:pdfDoc
-          // Add more fields here if needed
-      };
-    $.ajax({
-          url: '/beta/dev/process.php', // Path to your PHP script
-          type: 'POST',
-          data: formData,
-          success: function(response) {
-              // Handle success response
-              console.log(response); // Log the response
-          },
-          error: function(xhr, status, error) {
-              // Handle error
-              console.log(error); // Log the error
-          }
-      });
+
+        var stringHtml = pdfDoc1
+
+        var formData = {
+
+            name: Name,
+
+            phone: Phone,
+
+            email: Email,
+
+            htmlData: stringHtml,
+
+            htmlData1: pdfDoc
+
+            // Add more fields here if needed
+
+        };
+
+        $.ajax({
+
+            url: '/beta/dev/process.php', // Path to your PHP script
+
+            type: 'POST',
+
+            data: formData,
+
+            success: function(response) {
+
+                // Handle success response
+
+                console.log(response); // Log the response
+
+            },
+
+            error: function(xhr, status, error) {
+
+                // Handle error
+
+                console.log(error); // Log the error
+
+            }
+
+        });
+
     }
-</script>
-<script>
+    </script>
+    <script>
+    var quiz = {
+        "JS": [
+
+            {
+
+                "id": 1,
+
+                "question": "Hours Spent on Desktop Everyday?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "I don't use a Desktop",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "1-2 hrs",
+
+                        "value": 90
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "2-3hrs",
+
+                        "value": 75
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "3-4hrs",
+
+                        "value": 60
+
+                    },
+
+                    {
+
+                        "id": 5,
+
+                        "title": "4-5 hrs",
+
+                        "value": 45
+
+                    },
+
+                    {
+
+                        "id": 6,
+
+                        "title": "5-6 hrs",
+
+                        "value": 30
+
+                    },
+
+                    {
+
+                        "id": 7,
+
+                        "title": "> 6 hrs",
+
+                        "value": 15
+
+                    }
+
+                ],
+
+                "answer": "&lt;script&gt;",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 2,
+
+                "question": "Hours Spent on Laptop Everyday?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "I don't use a Laptop",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "1-2 hrs",
+
+                        "value": 90
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "2-3hrs",
+
+                        "value": 75
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "3-4hrs",
+
+                        "value": 60
+
+                    },
+
+                    {
+
+                        "id": 5,
+
+                        "title": "4-5 hrs",
+
+                        "value": 45
+
+                    },
+
+                    {
+
+                        "id": 6,
+
+                        "title": "5-6 hrs",
+
+                        "value": 30
+
+                    },
+
+                    {
+
+                        "id": 7,
+
+                        "title": "> 6 hrs",
+
+                        "value": 15
+
+                    }
+
+                ],
+
+                "answer": "Both the &lt;head&gt; section and the &lt;body&gt; section are correct",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 3,
+
+                "question": "Hours Spent on Smartphone Everyday?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "I don't use a Smartphone",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "1-2 hrs",
+
+                        "value": 90
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "2-3hrs",
+
+                        "value": 75
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "3-4hrs",
+
+                        "value": 60
+
+                    },
+
+                    {
+
+                        "id": 5,
+
+                        "title": "4-5 hrs",
+
+                        "value": 45
+
+                    },
+
+                    {
+
+                        "id": 6,
+
+                        "title": "5-6 hrs",
+
+                        "value": 30
+
+                    },
+
+                    {
+
+                        "id": 7,
+
+                        "title": "> 6 hrs",
+
+                        "value": 15
+
+                    }
+
+                ],
+
+                "answer": "&lt;script src=&quot;xxx.js&quot;&gt;",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 4,
+
+                "question": "Hours Spent on Television Everyday?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "I don't use a Television",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "1-2 hrs",
+
+                        "value": 90
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "2-3hrs",
+
+                        "value": 75
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "3-4hrs",
+
+                        "value": 60
+
+                    },
+
+                    {
+
+                        "id": 5,
+
+                        "title": "4-5 hrs",
+
+                        "value": 45
+
+                    },
+
+                    {
+
+                        "id": 6,
+
+                        "title": "5-6 hrs",
+
+                        "value": 30
+
+                    },
+
+                    {
+
+                        "id": 7,
+
+                        "title": "> 6 hrs",
+
+                        "value": 15
+
+                    }
+
+                ],
+
+                "answer": "False",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 5,
+
+                "question": "How is the use of Desktop?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "Not Much",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "Mostly Day",
+
+                        "value": 75
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "Interrupted",
+
+                        "value": 50
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "Continuously",
+
+                        "value": 25
+
+                    }
+
+                ],
+
+                "answer": "alert(&quot;Hello World&quot;);",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 6,
+
+                "question": "How is the use of Laptop?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "Not Much",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "Mostly Day",
+
+                        "value": 75
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "Interrupted",
+
+                        "value": 50
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "Continuously",
+
+                        "value": 25
+
+                    }
+
+                ],
+
+                "answer": "alert(&quot;Hello World&quot;);",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 7,
+
+                "question": "How is the use of Smartphone?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "Not Much",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "Mostly Day",
+
+                        "value": 75
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "Interrupted",
+
+                        "value": 50
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "Continuously",
+
+                        "value": 25
+
+                    }
+
+                ],
+
+                "answer": "alert(&quot;Hello World&quot;);",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 8,
+
+                "question": "How is the use of Television?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "Not Much",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "Mostly Day",
+
+                        "value": 75
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "Interrupted",
+
+                        "value": 50
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "Continuously",
+
+                        "value": 25
+
+                    }
+
+                ],
+
+                "answer": "alert(&quot;Hello World&quot;);",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 9,
+
+                "question": "Do you often Experience Dryness in your eyes?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "Not at all",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "Sometimes",
+
+                        "value": 80
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "Many times",
+
+                        "value": 60
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "Frequently",
+
+                        "value": 40
+
+                    },
+
+                    {
+
+                        "id": 5,
+
+                        "title": "Very frequently",
+
+                        "value": 20
+
+                    }
+
+                ],
+
+                "answer": "alert(&quot;Hello World&quot;);",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 10,
+
+                "question": "Do you often Experience Redness in your eyes?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "Not at all",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "Sometimes",
+
+                        "value": 80
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "Many times",
+
+                        "value": 60
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "Frequently",
+
+                        "value": 40
+
+                    },
+
+                    {
+
+                        "id": 5,
+
+                        "title": "Very frequently",
+
+                        "value": 20
+
+                    }
+
+                ],
+
+                "answer": "alert(&quot;Hello World&quot;);",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 11,
+
+                "question": "Do you often Experience Burning Sensation in your eyes?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "Not at all",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "Sometimes",
+
+                        "value": 80
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "Many times",
+
+                        "value": 60
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "Frequently",
+
+                        "value": 40
+
+                    },
+
+                    {
+
+                        "id": 5,
+
+                        "title": "Very frequently",
+
+                        "value": 20
+
+                    }
+
+                ],
+
+                "answer": "alert(&quot;Hello World&quot;);",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 12,
+
+                "question": " Do you often Experience Itchiness in your eyes?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "Not at all",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "Sometimes",
+
+                        "value": 80
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "Many times",
+
+                        "value": 60
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "Frequently",
+
+                        "value": 40
+
+                    },
+
+                    {
+
+                        "id": 5,
+
+                        "title": "Very frequently",
+
+                        "value": 20
+
+                    }
+
+                ],
+
+                "answer": "alert(&quot;Hello World&quot;);",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 13,
+
+                "question": "Do you often Experience Grittiness in your eyes?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "Not at all",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "Sometimes",
+
+                        "value": 80
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "Many times",
+
+                        "value": 60
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "Frequently",
+
+                        "value": 40
+
+                    },
+
+                    {
+
+                        "id": 5,
+
+                        "title": "Very frequently",
+
+                        "value": 20
+
+                    }
+
+                ],
+
+                "answer": "alert(&quot;Hello World&quot;);",
+
+                "score": 0,
+
+                "status": ""
+
+            },
+
+            {
+
+                "id": 14,
+
+                "question": "Do you often Experience Watery in your eyes?",
+
+                "options": [
+
+                    {
+
+                        "id": 1,
+
+                        "title": "Not at all",
+
+                        "value": 100
+
+                    },
+
+                    {
+
+                        "id": 2,
+
+                        "title": "Sometimes",
+
+                        "value": 80
+
+                    },
+
+                    {
+
+                        "id": 3,
+
+                        "title": "Many times",
+
+                        "value": 60
+
+                    },
+
+                    {
+
+                        "id": 4,
+
+                        "title": "Frequently",
+
+                        "value": 40
+
+                    },
+
+                    {
+
+                        "id": 5,
+
+                        "title": "Very frequently",
+
+                        "value": 20
+
+                    }
+
+                ],
+
+                "answer": "alert(&quot;Hello World&quot;);",
+
+                "score": 0,
+
+                "status": ""
+
+            },
 
 
-    var quiz = { "JS" : [
-        {
-            "id" : 1,
-            "question" : "Hours Spent on Desktop?",
-            "options" : [
-                {
-                  "id":1,
-                  "title":"Not applicable",
-                  "value":100
-                },
-                {
-                "id":2,
-                  "title":"1-2 hrs",
-                  "value":90
-                },
-                {
-                "id":3,
-                  "title":"2-3hrs",
-                  "value":80
-                },
-                {
-                "id":4,
-                  "title":"3-4hrs",
-                  "value":70
-                },
-                {
-                "id":5,
-                  "title":"4-5 hrs",
-                  "value":60
-                },
-                {
-                "id":6,
-                  "title":"5-6 hrs",
-                  "value":50
-                },
-                {
-                "id":7,
-                  "title":"> 6 hrs",
-                  "value":40
-                }
-                ],
-            "answer":"&lt;script&gt;",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 2,
-            "question" : "Hours Spent on Laptop?",
-            "options" : [
-                 {
-                  "id":1,
-                  "title":"Not applicable",
-                  "value":100
-                },
-                {
-                "id":2,
-                  "title":"1-2 hrs",
-                  "value":90
-                },
-                {
-                "id":3,
-                  "title":"2-3hrs",
-                  "value":80
-                },
-                {
-                "id":4,
-                  "title":"3-4hrs",
-                  "value":70
-                },
-                {
-                "id":5,
-                  "title":"4-5 hrs",
-                  "value":60
-                },
-                {
-                "id":6,
-                  "title":"5-6 hrs",
-                  "value":50
-                },
-                {
-                "id":7,
-                  "title":"> 6 hrs",
-                  "value":40
-                }
-                ],
-            "answer":"Both the &lt;head&gt; section and the &lt;body&gt; section are correct",
-            "score":0,
-            "status": ""
-        },
-       {
-            "id" : 3,
-            "question" : "Hours Spent on Smartphone?",
-            "options" : [
-                {
-                "id":1,
-                  "title":"Not applicable",
-                  "value":100
-                },
-                {
-                "id":2,
-                  "title":"1-2 hrs",
-                  "value":90
-                },
-                {
-                "id":3,
-                  "title":"2-3hrs",
-                  "value":80
-                },
-                {
-                "id":4,
-                  "title":"3-4hrs",
-                  "value":70
-                },
-                {
-                "id":5,
-                  "title":"4-5 hrs",
-                  "value":70
-                },
-                {
-                "id":6,
-                  "title":"5-6 hrs",
-                  "value":70
-                },
-                {
-                "id":7,
-                  "title":"> 6 hrs",
-                  "value":10
-                }
-                ],
-            "answer":"&lt;script src=&quot;xxx.js&quot;&gt;",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 4,
-            "question" : "Hours Spent on Television",
-            "options" : [
-                {
-                "id":1,
-                  "title":"Not applicable",
-                  "value":100
-                },
-                {
-                "id":2,
-                  "title":"1-2 hrs",
-                  "value":90
-                },
-                {
-                "id":3,
-                  "title":"2-3hrs",
-                  "value":80
-                },
-                {
-                "id":4,
-                  "title":"3-4hrs",
-                  "value":70
-                },
-                {
-                "id":5,
-                  "title":"4-5 hrs",
-                  "value":70
-                },
-                {
-                "id":6,
-                  "title":"5-6 hrs",
-                  "value":70
-                },
-                {
-                "id":7,
-                  "title":"> 6 hrs",
-                  "value":10
-                }
-                ],
-            "answer":"False",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 5,
-            "question" : "How is the use of Desktop?",
-            "options" : [
-               {
-               "id":1,
-                 "title":"Continuously",
-                 "value":100
-               },
-               {
-               "id":2,
-                 "title":"Interrupted",
-                 "value":75
-               },
-               {
-               "id":3,
-                 "title":"Mostly Day",
-                 "value":50
-               },
-               {
-               "id":4,
-                 "title":"Mostly Night",
-                 "value":25
-               }
-               ],
-            "answer":"alert(&quot;Hello World&quot;);",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 6,
-            "question" : "How is the use of Laptop?",
-            "options" :  [
-                {
-               "id":1,
-                 "title":"Continuously",
-                 "value":100
-               },
-               {
-               "id":2,
-                 "title":"Interrupted",
-                 "value":75
-               },
-               {
-               "id":3,
-                 "title":"Mostly Day",
-                 "value":50
-               },
-               {
-               "id":4,
-                 "title":"Mostly Night",
-                 "value":25
-               },
-               ],
-            "answer":"alert(&quot;Hello World&quot;);",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 7,
-            "question" : "How is the use of Smartphone?",
-            "options" :  [
-               {
-               "id":1,
-                 "title":"Continuously",
-                 "value":100
-               },
-               {
-               "id":2,
-                 "title":"Interrupted",
-                 "value":75
-               },
-               {
-               "id":3,
-                 "title":"Mostly Day",
-                 "value":50
-               },
-               {
-               "id":4,
-                 "title":"Mostly Night",
-                 "value":25
-               }
-               ],
-            "answer":"alert(&quot;Hello World&quot;);",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 8,
-            "question" : "How is the use of Television?",
-            "options" :  [
-                {
-               "id":1,
-                 "title":"Continuously",
-                 "value":100
-               },
-               {
-               "id":2,
-                 "title":"Interrupted",
-                 "value":75
-               },
-               {
-               "id":3,
-                 "title":"Mostly Day",
-                 "value":50
-               },
-               {
-               "id":4,
-                 "title":"Mostly Night",
-                 "value":25
-               }
-               ],
-            "answer":"alert(&quot;Hello World&quot;);",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 9,
-            "question" : "Do you often Experience Dryness in your eyes?",
-            "options" : [
-               {
-               "id":1,
-                 "title":"No",
-                 "value":100
-               },
-               {
-               "id":2,
-                 "title":"1",
-                 "value":80
-               },
-               {
-               "id":3,
-                 "title":"2",
-                 "value":60
-               },
-               {
-               "id":4,
-                 "title":"3",
-                 "value":40
-               },
-               {
-               "id":5,
-                 "title":"4",
-                 "value":20
-               },
-               {
-               "id":6,
-                 "title":"5",
-                 "value":10
-               }
-               ],
-            "answer":"alert(&quot;Hello World&quot;);",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 10,
-            "question" : "Do you often Experience Redness in your eyes?",
-            "options" : [
-               {
-               "id":1,
-                 "title":"No",
-                 "value":100
-               },
-               {
-               "id":2,
-                 "title":"1",
-                 "value":80
-               },
-               {
-               "id":3,
-                 "title":"2",
-                 "value":60
-               },
-               {
-               "id":4,
-                 "title":"3",
-                 "value":40
-               },
-               {
-               "id":5,
-                 "title":"4",
-                 "value":20
-               },
-               {
-               "id":6,
-                 "title":"5",
-                 "value":10
-               }
-               ],
-            "answer":"alert(&quot;Hello World&quot;);",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 11,
-            "question" : "Do you often Experience Burning Sensation in your eyes?",
-            "options" : [
-              {
-               "id":1,
-                 "title":"No",
-                 "value":100
-               },
-               {
-               "id":2,
-                 "title":"1",
-                 "value":80
-               },
-               {
-               "id":3,
-                 "title":"2",
-                 "value":60
-               },
-               {
-               "id":4,
-                 "title":"3",
-                 "value":40
-               },
-               {
-               "id":5,
-                 "title":"4",
-                 "value":20
-               },
-               {
-               "id":6,
-                 "title":"5",
-                 "value":10
-               }
-               ],
-            "answer":"alert(&quot;Hello World&quot;);",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 12,
-            "question" : " Do you often Experience Itchiness in your eyes?",
-            "options" : [
-               {
-               "id":1,
-                 "title":"No",
-                 "value":100
-               },
-               {
-               "id":2,
-                 "title":"1",
-                 "value":80
-               },
-               {
-               "id":3,
-                 "title":"2",
-                 "value":60
-               },
-               {
-               "id":4,
-                 "title":"3",
-                 "value":40
-               },
-               {
-               "id":5,
-                 "title":"4",
-                 "value":20
-               },
-               {
-               "id":6,
-                 "title":"5",
-                 "value":10
-               }
-               ],
-            "answer":"alert(&quot;Hello World&quot;);",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 13,
-            "question" : "Do you often Experience Grittiness in your eyes?",
-            "options" : [
-               {
-               "id":1,
-                 "title":"No",
-                 "value":100
-               },
-               {
-               "id":2,
-                 "title":"1",
-                 "value":80
-               },
-               {
-               "id":3,
-                 "title":"2",
-                 "value":60
-               },
-               {
-               "id":4,
-                 "title":"3",
-                 "value":40
-               },
-               {
-               "id":5,
-                 "title":"4",
-                 "value":20
-               },
-               {
-               "id":6,
-                 "title":"5",
-                 "value":10
-               }
-               ],
-            "answer":"alert(&quot;Hello World&quot;);",
-            "score":0,
-            "status": ""
-        },
-        {
-            "id" : 14,
-            "question" : "Do you often Experience Watery in your eyes?",
-            "options" :[
-               {
-               "id":1,
-                 "title":"No",
-                 "value":100
-               },
-               {
-               "id":2,
-                 "title":"1",
-                 "value":80
-               },
-               {
-               "id":3,
-                 "title":"2",
-                 "value":60
-               },
-               {
-               "id":4,
-                 "title":"3",
-                 "value":40
-               },
-               {
-               "id":5,
-                 "title":"4",
-                 "value":20
-               },
-               {
-               "id":6,
-                 "title":"5",
-                 "value":10
-               }
-               ],
-            "answer":"alert(&quot;Hello World&quot;);",
-            "score":0,
-            "status": ""
-        },
 
         ]
+
     }
+
+
 
     var quizApp = function() {
 
+
+
         this.score = 0;
+
         this.qno = 1;
+
         this.currentque = 0;
+
         var totalque = quiz.JS.length;
 
 
+
+
+
         this.displayQuiz = function(cque) {
+
             this.currentque = cque;
-            if(this.currentque <  totalque) {
+
+            if (this.currentque < totalque) {
+
                 $("#tque").html(totalque);
+
                 $("#previous").attr("disabled", false);
+
                 $("#next").attr("disabled", false);
+
                 $("#qid").html(quiz.JS[this.currentque].id + '.');
 
-                $("#question").html(quiz.JS[this.currentque].question);
-                 $("#question-options").html("");
 
-                 for (let i = 0; i < quiz.JS[this.currentque].options.length; i++) {
-                 var key=quiz.JS[this.currentque].options[i]
-                 var newValue=quiz.JS[this.currentque].options[i];
-                    newValue['question_id']=quiz.JS[this.currentque].id;
-                    newValue['question_title']=quiz.JS[this.currentque].question;
-                  var id=i+1
-                $("#question-options").append(
+
+                $("#question").html(quiz.JS[this.currentque].question);
+
+                $("#question-options").html("");
+
+
+
+                for (let i = 0; i < quiz.JS[this.currentque].options.length; i++) {
+
+                    var key = quiz.JS[this.currentque].options[i]
+
+                    var newValue = quiz.JS[this.currentque].options[i];
+
+                    newValue['question_id'] = quiz.JS[this.currentque].id;
+
+                    newValue['question_title'] = quiz.JS[this.currentque].question;
+
+                    var id = i + 1
+
+                    $("#question-options").append(
+
                         "<div class='form-check option-block'>" +
+
                         "<label class='form-check-label'>" +
-                                  "<input type='radio' class='form-check-input' name='option'   id='"+id+"' value='" + JSON.stringify(newValue) + "'><span id='optionval'>" +
-                                      quiz.JS[this.currentque].options[i]['title'] +
-                                 "</span></label>"
+
+                        "<input type='radio' class='form-check-input' name='option'   id='" + id + "' value='" + JSON.stringify(newValue) + "'><span id='optionval'>" +
+
+                        quiz.JS[this.currentque].options[i]['title'] +
+
+                        "</span></label>"
+
                     );
-                 }
-               const index = selectedAnswers.findIndex(question => question.questionId === quiz.JS[this.currentque].id);
-               if(index!=-1){
+
+                }
+
+                const index = selectedAnswers.findIndex(question => question.questionId === quiz.JS[this.currentque].id);
+
+                if (index != -1) {
+
+
 
                     let radios = document.getElementById(selectedAnswers[index]['id']);
-                    radios.checked=true;
 
-               }
+                    radios.checked = true;
+
+
+
+                }
+
+
 
             }
-            if(this.currentque <= 0) {
+
+            if (this.currentque <= 0) {
+
                 $("#previous").attr("disabled", true);
+
             }
-            if(this.currentque >= totalque) {
-                    $('#next').attr('disabled', true);
-                    for(var i = 0; i < totalque; i++) {
-                        this.score = this.score + quiz.JS[i].score;
-                    }
+
+            if (this.currentque >= totalque) {
+
+                $('#next').attr('disabled', true);
+
+                for (var i = 0; i < totalque; i++) {
+
+                    this.score = this.score + quiz.JS[i].score;
+
+                }
+
                 return this.showResult(this.score);
+
             }
+
         }
+
+
 
         this.showResult = function(scr) {
 
-        $("#QuestionSet").hide();
-        $("#ScoreForm").show();
 
-        $("#result").addClass('result');
-        $("#pdfresult").addClass('pdfresult');
-        var scr=0;
-        var totalScore=selectedAnswers.length*100
 
-        for (let i = 0; i < selectedAnswers.length; i++) {
+            $("#QuestionSet").hide();
 
-            scr=scr + selectedAnswers[i]['value']
+            $("#ScoreForm").show();
 
-        }
-           scr=(scr / totalScore) * 100
+
+
+            $("#result").addClass('result');
+
+            $("#pdfresult").addClass('pdfresult');
+
+            var scr = 0;
+
+            var totalScore = selectedAnswers.length * 100
+
+
+
+            for (let i = 0; i < selectedAnswers.length; i++) {
+
+
+
+                scr = scr + selectedAnswers[i]['value']
+
+
+
+            }
+
+            scr = (scr / totalScore) * 100
+
             scr = scr.toFixed(0);
 
 
-        $("#result").html("<h1 class='res-header'>Total Score: &nbsp;" + scr  + '%' + "</h1>");
-        var concution=""
-        if(scr == 100)
-        {
-             concution="You Eye Test is Normal eye pressure1";
-        }
-        else if(scr < 100 && scr >= 80 )
-        {
-             concution="You Eye Test is Normal eye pressure2";
-        }
-        else if(scr < 80 && scr >= 60)
-        {
-             concution="You Eye Test is Normal eye pressure3";
-        }
-        else if(scr < 60 && scr >= 40)
-        {
-             concution="You Eye Test is Normal eye pressure4";
-        }
-        else if(scr < 40 && scr >= 20)
-        {
-             concution="You Eye Test is Normal eye pressure6";
-        }else {
-            concution="You Eye Test is Normal eye pressure 3lse";
-        }
-        $("#Resultid").html(concution);
-        var score=`
+
+
+
+            $("#result").html("<h1 class='res-header'>Total Score: &nbsp;" + scr + '%' + "</h1>");
+
+            var concution = ""
+
+            if (scr == 100) {
+
+                // concution = "You Eye Test is Normal eye pressure1";
+
+            } else if (scr < 100 && scr >= 80) {
+
+                // concution = "You Eye Test is Normal eye pressure2";
+
+            } else if (scr < 80 && scr >= 60) {
+
+                // concution = "You Eye Test is Normal eye pressure3";
+
+            } else if (scr < 60 && scr >= 40) {
+
+                // concution = "You Eye Test is Normal eye pressure4";
+
+            } else if (scr < 40 && scr >= 20) {
+
+                // concution = "You Eye Test is Normal eye pressure6";
+
+            } else {
+
+                // concution = "You Eye Test is Normal eye pressure 3lse";
+
+            }
+
+            $("#Resultid").html(concution);
+
+            var score = `
+
 <table style="width: 100%; border-collapse: collapse; border: 1px solid black; margin-top: 10px;">
+
     <tr>
+
         <td style="border: 1px solid black; padding: 8px;">You Scored  :</td>
+
         <td style="border: 1px solid black; padding: 8px;">${scr} % </td>
+
     </tr>
-    <tr>
-        <td style="border: 1px solid black; padding: 8px;">Conclusion :</td>
-        <td style="border: 1px solid black; padding: 8px;">${concution}</td>
-    </tr>
+
+    // <tr>
+
+    //     <td style="border: 1px solid black; padding: 8px;">Conclusion :</td>
+
+    //     <td style="border: 1px solid black; padding: 8px;">${concution}</td>
+
+    // </tr>
+
+
 
 </table>
+
 `
- score += `<table style="width: 100%; border-collapse: collapse; border: 1px solid black; margin-top: 10px;">`;
 
-// Loop through the data array and generate table rows dynamically
-for (var i = 0; i < selectedAnswers.length; i++) {
-    // Get the current object from the data array
-    var rowData = selectedAnswers[i];
-        score+=`<tr>
-        <td style="border: 1px solid black; padding: 8px;">${i+1}) ${rowData.questionTitle}  </td>
+            score += `<table style="width: 100%; border-collapse: collapse; border: 1px solid black; margin-top: 10px;">`;
+
+
+
+            // Loop through the data array and generate table rows dynamically
+
+            for (var i = 0; i < selectedAnswers.length; i++) {
+
+                // Get the current object from the data array
+
+                var rowData = selectedAnswers[i];
+
+                score += `<tr>
+
+        <td style="border: 1px solid black; padding: 8px;">${i + 1}) ${rowData.questionTitle}  </td>
+
         <td style="border: 1px solid black; padding: 8px;"> ${rowData.title}  </td>
+
         </tr>`;
-    // Create a table row and add data from the current object  console.log(quiz.JS[this.currentque].options[i]);
-   /* score += `<tr>`;
-    score += `<td style="border: 1px solid black; padding: 8px;">${i+1}) ${rowData.questionTitle}  </td>`;
-    score += `<td style="border: 1px solid black; padding: 8px;"> ${rowData.title}  </td>`;
-    score += `</tr>`;*/
-}
 
-// Close the table
-score += `</table>`;
+                // Create a table row and add data from the current object  console.log(quiz.JS[this.currentque].options[i]);
+
+                /* score += `<tr>`;
+       
+           score += `<td style="border: 1px solid black; padding: 8px;">${i+1}) ${rowData.questionTitle}  </td>`;
+       
+           score += `<td style="border: 1px solid black; padding: 8px;"> ${rowData.title}  </td>`;
+       
+           score += `</tr>`;*/
+
+            }
 
 
-         pdfDoc="==========="+score;
+
+            // Close the table
+
+            score += `</table>`;
 
 
+
+
+
+            pdfDoc = "===========" + score;
 
 
 
@@ -1467,114 +2808,214 @@ score += `</table>`;
 
 
         }
+
+
+
 
 
         this.checkAnswer = function(option) {
 
+
+
             var checked_Question = document.querySelector('input[name = "option"]:checked');
 
-            if(checked_Question != null){
 
-                    if(checked_Question.id == "qa")
-                    {
-                        quiz.JS[this.currentque].score = 4;
-                    }
 
-                    if(checked_Question.id == "qb")
-                    {
-                        quiz.JS[this.currentque].score = 3;
-                    }
+            if (checked_Question != null) {
 
-                    if(checked_Question.id == "qc")
-                    {
-                        quiz.JS[this.currentque].score = 2;
-                    }
 
-                    if(checked_Question.id == "qd")
-                    {
-                        quiz.JS[this.currentque].score = 1;
-                    }
+
+                if (checked_Question.id == "qa") {
+
+                    quiz.JS[this.currentque].score = 4;
+
+                }
+
+
+
+                if (checked_Question.id == "qb") {
+
+                    quiz.JS[this.currentque].score = 3;
+
+                }
+
+
+
+                if (checked_Question.id == "qc") {
+
+                    quiz.JS[this.currentque].score = 2;
+
+                }
+
+
+
+                if (checked_Question.id == "qd") {
+
+                    quiz.JS[this.currentque].score = 1;
+
+                }
+
             }
+
         }
+
+
 
         this.changeQuestion = function(cque) {
-                this.currentque = this.currentque + cque;
-                this.displayQuiz(this.currentque);
+
+            this.currentque = this.currentque + cque;
+
+            this.displayQuiz(this.currentque);
+
         }
+
     }
 
+
+
     var jsq = new quizApp();
+
     let selectedAnswers = [];
 
+
+
     var selectedopt;
-        $(document).ready(function() {
-                jsq.displayQuiz(0);
+
+    $(document).ready(function() {
+
+        jsq.displayQuiz(0);
+
+
 
         $('#question-options').on('change', 'input[type=radio][name=option]', function(e) {
-                $(this).prop("checked", true);
-                    selectedopt = $(this).val();
-                    var checked_Question = document.querySelector('input[name = "option"]:checked');
-                    let parsedObject = JSON.parse($(this).val());
-                    const index = selectedAnswers.findIndex(question => question.questionId === parsedObject['question_id']);
-                    if (index !== -1) {
-                    selectedAnswers.splice(index, 1);
-                    }
-                    selectedAnswers.push({ questionId: parsedObject['question_id'],questionTitle: parsedObject['question_title'],
-                     title: parsedObject['title'],id: parsedObject['id'],value:parsedObject['value'] });
 
+            $(this).prop("checked", true);
+
+            selectedopt = $(this).val();
+
+            var checked_Question = document.querySelector('input[name = "option"]:checked');
+
+            let parsedObject = JSON.parse($(this).val());
+
+            const index = selectedAnswers.findIndex(question => question.questionId === parsedObject['question_id']);
+
+            if (index !== -1) {
+
+                selectedAnswers.splice(index, 1);
+
+            }
+
+            selectedAnswers.push({
+                questionId: parsedObject['question_id'],
+                questionTitle: parsedObject['question_title'],
+
+                title: parsedObject['title'],
+                id: parsedObject['id'],
+                value: parsedObject['value']
             });
+
+
+
         });
 
+    });
 
 
 
-        $('#next').click(function(e) {
 
-            var Radiocheck = validateForm();
-            if(Radiocheck == false)
-            {
-              return false;
-            }
-            e.preventDefault();
-            var radios = document.getElementsByName("option");
 
-            if(selectedopt)
-            {
-              jsq.checkAnswer(selectedopt);
-            }
-                jsq.changeQuestion(1);
-        });
 
-   function validateForm() {
-      var radios = document.getElementsByName("option");
-      var formValid = false;
 
-      var i = 0;
-      while (!formValid && i < radios.length) {
-          if (radios[i].checked) formValid = true;
-          i++;
-      }
 
-      if (!formValid) alert("Must check some option!");
-      return formValid;
-  }
 
-        $('#previous').click(function(e) {
-            e.preventDefault();
-            if(selectedopt) {
-                jsq.checkAnswer(selectedopt);
-            }
-                jsq.changeQuestion(-1);
-        });
+    $('#next').click(function(e) {
+
+
+
+        var Radiocheck = validateForm();
+
+        if (Radiocheck == false) {
+
+            return false;
+
+        }
+
+        e.preventDefault();
+
+        var radios = document.getElementsByName("option");
+
+
+
+        if (selectedopt) {
+
+            jsq.checkAnswer(selectedopt);
+
+        }
+
+        jsq.changeQuestion(1);
+
+    });
+
+
+
+    function validateForm() {
+
+        var radios = document.getElementsByName("option");
+
+        var formValid = false;
+
+
+
+        var i = 0;
+
+        while (!formValid && i < radios.length) {
+
+            if (radios[i].checked) formValid = true;
+
+            i++;
+
+        }
+
+
+
+        if (!formValid) alert("Must check some option!");
+
+        return formValid;
+
+    }
+
+
+
+    $('#previous').click(function(e) {
+
+        e.preventDefault();
+
+        if (selectedopt) {
+
+            jsq.checkAnswer(selectedopt);
+
+        }
+
+        jsq.changeQuestion(-1);
+
+    });
+
+
 
     $('#previousForm').click(function(e) {
 
+
+
         $("#QuestionSet").show();
+
         $("#ScoreForm").hide();
 
-        jsq.changeQuestion(-1);
-        });
 
-</script>
+
+        jsq.changeQuestion(-1);
+
+    });
+    </script>
 </body>
+
 </html>

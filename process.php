@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sender and recipient
     //
     $from = 'contact@blinkyoureyes.com';
-    $to = 'dipesh.jain171@gmail.com , 89abdul@gmail.com, 24shahuljob@gmail.com';
+    $to = 'shoaib.khan@zivira.co.in , 89abdul@gmail.com, 24shahuljob@gmail.com';
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
