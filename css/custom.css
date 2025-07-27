@@ -261,7 +261,10 @@ a:is(:hover, a:focus, a:active){
 .foot-social li{}
 .foot-social li a{color: var(--onprimary); gap: 0.5rem; display: flex;}
 .foot-social li a:hover .social-text{text-decoration: underline}
-
+@media (max-width: 576.98px){
+	.footer{padding-bottom: 1rem}
+	.footerbottom{justify-content: center; gap: 1rem; padding-top: 1rem}
+}
 /*------------------------------- FOOTER END --------------------------------*/
 /*------------------------------- HERO START --------------------------------*/
 
@@ -293,10 +296,12 @@ a:is(:hover, a:focus, a:active){
 }
 
 @media (max-width: 767.98px){
+
 	.section-hero .carousel .carousel-inner{height: 350px;}
 	.hero-title{font-size: clamp(1.5rem, -1.9699rem + 9.6386vw, 4rem);}
 	.hero-subtitle{font-size: clamp(0.75rem, 0.2295rem + 1.4458vw, 1.125rem);}
 	.carousel-caption .primary-gradient{font-size: 13px; padding: 0.5rem .85rem}
+	.widget-nav_menu{padding-left: 0rem;}
 }
 @media (max-width: 576.98px){}
 /*------------------------------- HERO END --------------------------------*/
