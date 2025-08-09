@@ -543,7 +543,7 @@ a:is(:hover, a:focus, a:active){
 	--dots-color : #ffffff;
 	--content-bg: #eaeaea;
 	--line-color : #d8e5ee;
-	display: flex; flex-direction: column;
+	display: flex; flex-direction: column; position: relative
 }
 .timeline-list:before{
 	content: '';
@@ -625,13 +625,13 @@ a:is(:hover, a:focus, a:active){
 	} 
 
 } 
-@media (max-width: 767.98px){
-	.timeline-list:before{left: 15%; right: auto;}
-	.timeline-list .timeline-item{width: 90%; margin-left: auto; padding-left: calc(var(--dots-size) / 2  + 10px);}
+@media (max-width: 767.98px){ 
+	.timeline-list:before{left: 7%; right: auto;}
+	.timeline-list .timeline-item{width: 90%; margin-left: auto; padding-left: calc(var(--dots-size) / 2  + 10px); margin-bottom: 5rem}
 	.timeline-list .timeline-item .timeline-content:before{
 		left: auto; right: 100%; top: 5px; border-right-color: var(--content-bg);
 	}
 	.timeline-list .timeline-item .timeline-dot{left: calc(-1 * var(--dots-size) + 2px)}
-	.timeline-list .timeline-item:before{left: -90px; top: 5px;}
+	.timeline-list .timeline-item:before{left: var(--dots-size); top: calc(var(--dots-size) / -1);}
 }
 /*------------------------------ MILESTONE END ------------------------------*/
