@@ -96,6 +96,10 @@ a:is(:hover, a:focus, a:active){
 	letter-spacing: var(--letterspacing-medium); font-weight: 400; background-color: var(--bs-btn-bg);
 	border-color: var(--bs-btn-border-color); font-family: var(--secondaryfont);
 }
+.btn-primary:has(.bi){
+	display: inline-flex; align-items: center; gap: 0.5rem; width: fit-content;
+}
+.btn-primary .bi{font-size: 1.25rem;}
 .btn-secondary {
 	--bs-btn-color: var(--onsecondary);	--bs-btn-bg: var(--secondary); --bs-btn-border-color: var(--secondary);
     --bs-btn-disabled-bg: var(--secondary); --bs-btn-disabled-border-color: var(--secondary);
@@ -526,6 +530,39 @@ a:is(:hover, a:focus, a:active){
 }
 .portfolio-item:hover .portfolio__desc{visibility: visible;}
 
+.mainheading{
+	text-transform: uppercase;
+	color: var(--text-color);
+	font-family: var(--secondaryfont);
+	margin-bottom: 1rem;
+}
+.maindesc{
+	color: rgba(var(--text-color-rgb), 0.8);
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+.maindesc-label{
+	font-weight: bold;
+	color: var(--text-color);
+}
+.maindesc-cat{
+	font-weight: 400;
+	color: var(--primary);
+}
+.mainimage{
+	height: 300px;
+	background-color: var(--product-bgcolor);
+	border-radius: 16px;
+	padding: 1rem;
+}
+.mainimage img{
+	object-fit: contain;
+	object-position: center;
+	width: 100%;
+	height: 100%;
+}
+
 @media (max-width: 767.98px){
 	.portfolio-filter li{ margin-right: 10px; margin-bottom: 5px;}
 }
@@ -635,3 +672,37 @@ a:is(:hover, a:focus, a:active){
 	.timeline-list .timeline-item:before{left: var(--dots-size); top: calc(var(--dots-size) / -1);}
 }
 /*------------------------------ MILESTONE END ------------------------------*/
+
+.slick-slide {margin: 15px;}
+.slick-dots {list-style: none; padding: 0;text-align: center; margin-bottom: 0;z-index: 2;}
+.slick-dots li {
+	display: inline-block; margin: 5px; position: relative; z-index: 1; padding: 0; font-size: 0;
+  width: 10px; height: 10px; cursor: pointer; border-radius: 50%; border: 3px solid #9b9b9b; background-color: #9b9b9b;
+}
+
+.slick-dots li button {
+  font-size: 0; width: 100%;cursor: pointer; 
+  -webkit-user-select: none;-moz-user-select: none; user-select: none; outline: none; border: 0;background: transparent; padding: 0;
+}
+
+.slick-dots li.slick-active { border-color: #4aab3d; background-color: transparent;}
+.carousel-dots-light .slick-dots li:not(.slick-active) { border-color: #ffffff; background-color: #ffffff;}
+
+
+.slick-arrow {
+  position: absolute; top: 40%;
+  -webkit-transform: translateY(-50%); transform: translateY(-50%);
+  color: #282828; width: 45px; height: 45px; line-height: 45px; font-size: 0; z-index: 3;
+  -webkit-transition: all 0.3s linear; transition: all 0.3s linear;
+  cursor: pointer; -webkit-user-select: none; -moz-user-select: none; user-select: none;
+   outline: none; border: 0; background: transparent;
+}
+
+.slick-arrow:hover {color: #282828;}
+.slick-arrow.slick-next:before, .slick-arrow.slick-prev:before {font-family: 'bootstrap-icons'; font-size: 45px;}
+.slick-arrow.slick-next {right: 0;}
+.slick-arrow.slick-next:before {content: "\F285";}
+.slick-arrow.slick-prev {left: 0;}
+.slick-arrow.slick-prev:before {content: "\F284";}
+.carousel-arrows-light .slick-arrow {color: var(--primary);}
+.carousel-arrows-light .slick-arrow:hover {color: var(--primary);}
